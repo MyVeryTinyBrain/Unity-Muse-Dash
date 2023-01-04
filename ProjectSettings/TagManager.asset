@@ -1,0 +1,93 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Note
+  - NoteCollider
+  - Mediator
+  - ClearResult
+  - FailResult
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - NoteCollider
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Background_Back
+    uniqueID: 408859645
+    locked: 0
+  - name: Background_Mid
+    uniqueID: 2797397607
+    locked: 0
+  - name: Background_Front
+    uniqueID: 4294338597
+    locked: 0
+  - name: Background_Fever
+    uniqueID: 2398665507
+    locked: 0
+  - name: Background_FeverElement
+    uniqueID: 899231019
+    locked: 0
+  - name: Effect_Back
+    uniqueID: 872026359
+    locked: 0
+  - name: Effect_HitResult
+    uniqueID: 682012921
+    locked: 0
+  - name: Character
+    uniqueID: 2380756629
+    locked: 0
+  - name: Boss
+    uniqueID: 3585006643
+    locked: 0
+  - name: Effect_Mid
+    uniqueID: 2273094175
+    locked: 0
+  - name: Line
+    uniqueID: 97438277
+    locked: 0
+  - name: Note
+    uniqueID: 4149825459
+    locked: 0
+  - name: Effect_Front
+    uniqueID: 1221459541
+    locked: 0
+  - name: HitPoint
+    uniqueID: 2604188459
+    locked: 0
+  - name: UI
+    uniqueID: 1303660297
+    locked: 0
+  - name: Default
+    uniqueID: 0
+    locked: 0

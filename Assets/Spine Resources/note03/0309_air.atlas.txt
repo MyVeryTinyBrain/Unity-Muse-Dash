@@ -1,0 +1,90 @@
+
+0309_air.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0303/fx
+  rotate: false
+  xy: 170, 52
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0303/smoke
+  rotate: false
+  xy: 222, 83
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+0309/images_air/sawtooth
+  rotate: false
+  xy: 2, 152
+  size: 103, 102
+  orig: 103, 102
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_1
+  rotate: false
+  xy: 94, 38
+  size: 74, 74
+  orig: 74, 74
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_2
+  rotate: false
+  xy: 107, 114
+  size: 84, 58
+  orig: 84, 58
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_3
+  rotate: true
+  xy: 193, 104
+  size: 76, 58
+  orig: 76, 58
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_4
+  rotate: false
+  xy: 92, 2
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_5
+  rotate: false
+  xy: 2, 67
+  size: 90, 83
+  orig: 90, 83
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_6
+  rotate: true
+  xy: 2, 2
+  size: 63, 88
+  orig: 63, 88
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_7
+  rotate: true
+  xy: 184, 182
+  size: 72, 69
+  orig: 72, 69
+  offset: 0, 0
+  index: -1
+0309/images_air/scrap_8
+  rotate: false
+  xy: 107, 174
+  size: 75, 80
+  orig: 75, 81
+  offset: 0, 1
+  index: -1
+0309/images_air/tooth
+  rotate: false
+  xy: 132, 13
+  size: 33, 23
+  orig: 33, 23
+  offset: 0, 0
+  index: -1

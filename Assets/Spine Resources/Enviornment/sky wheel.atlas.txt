@@ -1,0 +1,27 @@
+
+sky wheel.png
+size: 1024,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+sky wheel 1
+  rotate: false
+  xy: 481, 144
+  size: 259, 325
+  orig: 259, 325
+  offset: 0, 0
+  index: -1
+sky wheel 2
+  rotate: false
+  xy: 2, 2
+  size: 477, 467
+  orig: 477, 467
+  offset: 0, 0
+  index: -1
+sky wheel 3
+  rotate: false
+  xy: 481, 85
+  size: 45, 57
+  orig: 45, 57
+  offset: 0, 0
+  index: -1

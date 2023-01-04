@@ -1,0 +1,132 @@
+
+0503.png
+size: 2048,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0503/images/fx
+  rotate: false
+  xy: 1763, 111
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_1
+  rotate: false
+  xy: 2, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_2
+  rotate: false
+  xy: 224, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_3
+  rotate: false
+  xy: 446, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_4
+  rotate: false
+  xy: 668, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_5
+  rotate: false
+  xy: 890, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/jump_line_6
+  rotate: false
+  xy: 1112, 2
+  size: 220, 159
+  orig: 220, 159
+  offset: 0, 0
+  index: -1
+0503/images/line
+  rotate: false
+  xy: 1555, 94
+  size: 273, 6
+  orig: 273, 6
+  offset: 0, 0
+  index: -1
+0503/images/sawtooth
+  rotate: true
+  xy: 1334, 17
+  size: 144, 150
+  orig: 144, 150
+  offset: 0, 0
+  index: -1
+0503/images/scrap_1
+  rotate: true
+  xy: 1486, 31
+  size: 67, 58
+  orig: 67, 58
+  offset: 0, 0
+  index: -1
+0503/images/scrap_2
+  rotate: true
+  xy: 1830, 96
+  size: 65, 56
+  orig: 65, 56
+  offset: 0, 0
+  index: -1
+0503/images/scrap_3
+  rotate: false
+  xy: 1830, 43
+  size: 67, 51
+  orig: 67, 51
+  offset: 0, 0
+  index: -1
+0503/images/scrap_4
+  rotate: false
+  xy: 1888, 127
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+0503/images/scrap_5
+  rotate: true
+  xy: 1486, 100
+  size: 61, 67
+  orig: 61, 67
+  offset: 0, 0
+  index: -1
+0503/images/scrap_6
+  rotate: true
+  xy: 1689, 109
+  size: 52, 72
+  orig: 52, 72
+  offset: 0, 0
+  index: -1
+0503/images/scrap_7
+  rotate: false
+  xy: 1555, 102
+  size: 66, 59
+  orig: 66, 59
+  offset: 0, 0
+  index: -1
+0503/images/scrap_8
+  rotate: true
+  xy: 1623, 105
+  size: 56, 64
+  orig: 56, 64
+  offset: 0, 0
+  index: -1
+0503/images/smoke
+  rotate: false
+  xy: 1888, 106
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1

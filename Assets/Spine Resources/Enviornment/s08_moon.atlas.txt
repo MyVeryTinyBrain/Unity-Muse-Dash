@@ -1,0 +1,41 @@
+
+s08_moon.png
+size: 2048,1024
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+fx/moon1
+  rotate: false
+  xy: 2, 536
+  size: 87, 87
+  orig: 87, 87
+  offset: 0, 0
+  index: -1
+fx/moon2
+  rotate: false
+  xy: 1381, 47
+  size: 266, 213
+  orig: 266, 213
+  offset: 0, 0
+  index: -1
+fx/moon3
+  rotate: 180
+  xy: 831, 3
+  size: 546, 297
+  orig: 546, 297
+  offset: 0, 0
+  index: -1
+fx/moon4
+  rotate: false
+  xy: 2, 189
+  size: 996, 435
+  orig: 996, 436
+  offset: 0, 0
+  index: -1
+fx/moon5
+  rotate: 180
+  xy: 953, 288
+  size: 753, 337
+  orig: 753, 341
+  offset: 0, 4
+  index: -1

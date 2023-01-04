@@ -1,0 +1,27 @@
+
+0002_hp.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+hp
+  rotate: true
+  xy: 102, 52
+  size: 69, 60
+  orig: 69, 60
+  offset: 0, 0
+  index: -1
+hp_glow
+  rotate: false
+  xy: 2, 52
+  size: 98, 88
+  orig: 98, 88
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 140, 48
+  orig: 140, 48
+  offset: 0, 0
+  index: -1

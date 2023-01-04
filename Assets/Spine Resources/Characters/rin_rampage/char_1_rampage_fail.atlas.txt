@@ -1,0 +1,146 @@
+
+char_1_rampage_fail.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bunny_images/hair_B
+  rotate: true
+  xy: 1022, 69
+  size: 128, 119
+  orig: 128, 119
+  offset: 0, 0
+  index: -1
+rampage_images/body
+  rotate: true
+  xy: 2, 69
+  size: 440, 335
+  orig: 440, 335
+  offset: 0, 0
+  index: -1
+rampage_images/eye_L
+  rotate: false
+  xy: 323, 18
+  size: 75, 49
+  orig: 75, 49
+  offset: 0, 0
+  index: -1
+rampage_images/eye_R
+  rotate: true
+  xy: 89, 6
+  size: 61, 36
+  orig: 61, 36
+  offset: 0, 0
+  index: -1
+rampage_images/eyebrow_L
+  rotate: true
+  xy: 35, 5
+  size: 62, 52
+  orig: 62, 52
+  offset: 0, 0
+  index: -1
+rampage_images/eyebrow_R
+  rotate: false
+  xy: 400, 24
+  size: 43, 45
+  orig: 43, 45
+  offset: 0, 0
+  index: -1
+rampage_images/feet_R
+  rotate: true
+  xy: 339, 71
+  size: 122, 139
+  orig: 122, 139
+  offset: 0, 0
+  index: -1
+rampage_images/hair_A
+  rotate: true
+  xy: 127, 9
+  size: 58, 160
+  orig: 58, 160
+  offset: 0, 0
+  index: -1
+rampage_images/hair_B
+  rotate: true
+  xy: 901, 65
+  size: 132, 119
+  orig: 132, 119
+  offset: 0, 0
+  index: -1
+rampage_images/hair_D
+  rotate: true
+  xy: 861, 199
+  size: 75, 222
+  orig: 75, 222
+  offset: 0, 0
+  index: -1
+rampage_images/hair_tail
+  rotate: false
+  xy: 690, 31
+  size: 209, 165
+  orig: 209, 165
+  offset: 0, 0
+  index: -1
+rampage_images/hand_L_1
+  rotate: false
+  xy: 587, 30
+  size: 101, 166
+  orig: 101, 166
+  offset: 0, 0
+  index: -1
+rampage_images/hand_L_2
+  rotate: false
+  xy: 1024, 287
+  size: 110, 222
+  orig: 110, 222
+  offset: 0, 0
+  index: -1
+rampage_images/hand_R
+  rotate: false
+  xy: 480, 22
+  size: 105, 171
+  orig: 105, 171
+  offset: 0, 0
+  index: -1
+rampage_images/head
+  rotate: true
+  xy: 569, 198
+  size: 311, 290
+  orig: 311, 290
+  offset: 0, 0
+  index: -1
+rampage_images/leg_L
+  rotate: true
+  xy: 339, 195
+  size: 314, 228
+  orig: 316, 230
+  offset: 1, 1
+  index: -1
+rampage_images/leg_R
+  rotate: true
+  xy: 861, 276
+  size: 233, 161
+  orig: 233, 161
+  offset: 0, 0
+  index: -1
+rampage_images/mouth
+  rotate: true
+  xy: 2, 2
+  size: 65, 31
+  orig: 65, 31
+  offset: 0, 0
+  index: -1
+rampage_images/nose
+  rotate: true
+  xy: 127, 2
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1
+rock_images/head_fx
+  rotate: true
+  xy: 289, 17
+  size: 50, 32
+  orig: 50, 32
+  offset: 0, 0
+  index: -1

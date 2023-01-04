@@ -1,0 +1,48 @@
+
+fx_combo_1_touhou_black.png
+size: 128,128
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ca
+  rotate: false
+  xy: 2, 52
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+Cb
+  rotate: false
+  xy: 2, 52
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+e
+  rotate: false
+  xy: 65, 35
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+f
+  rotate: true
+  xy: 45, 2
+  size: 31, 36
+  orig: 31, 36
+  offset: 0, 0
+  index: -1
+r
+  rotate: false
+  xy: 65, 74
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+v
+  rotate: true
+  xy: 2, 17
+  size: 33, 41
+  orig: 33, 41
+  offset: 0, 0
+  index: -1

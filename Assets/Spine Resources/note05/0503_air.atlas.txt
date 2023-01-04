@@ -1,0 +1,83 @@
+
+0503_air.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0503/images_air/fx
+  rotate: false
+  xy: 190, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0503/images_air/sawtooth
+  rotate: false
+  xy: 2, 103
+  size: 143, 151
+  orig: 143, 153
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_1
+  rotate: false
+  xy: 147, 195
+  size: 71, 59
+  orig: 71, 59
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_2
+  rotate: true
+  xy: 137, 35
+  size: 66, 51
+  orig: 66, 51
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_3
+  rotate: true
+  xy: 199, 119
+  size: 74, 45
+  orig: 74, 45
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_4
+  rotate: false
+  xy: 2, 2
+  size: 31, 28
+  orig: 31, 28
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_5
+  rotate: false
+  xy: 2, 32
+  size: 63, 69
+  orig: 63, 69
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_6
+  rotate: false
+  xy: 147, 120
+  size: 50, 73
+  orig: 50, 73
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_7
+  rotate: false
+  xy: 67, 42
+  size: 68, 59
+  orig: 68, 59
+  offset: 0, 0
+  index: -1
+0503/images_air/scrap_8
+  rotate: false
+  xy: 190, 54
+  size: 60, 63
+  orig: 60, 63
+  offset: 0, 0
+  index: -1
+0503/images_air/smoke
+  rotate: false
+  xy: 220, 235
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1

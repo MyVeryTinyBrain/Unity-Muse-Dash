@@ -1,0 +1,48 @@
+
+fx_combo_0.png
+size: 128,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+Ca
+  rotate: false
+  xy: 2, 212
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+Cb
+  rotate: false
+  xy: 2, 149
+  size: 61, 61
+  orig: 61, 61
+  offset: 0, 0
+  index: -1
+e
+  rotate: false
+  xy: 2, 70
+  size: 39, 37
+  orig: 39, 37
+  offset: 0, 0
+  index: -1
+f
+  rotate: true
+  xy: 2, 2
+  size: 31, 36
+  orig: 31, 36
+  offset: 0, 0
+  index: -1
+r
+  rotate: true
+  xy: 2, 109
+  size: 38, 39
+  orig: 38, 39
+  offset: 0, 0
+  index: -1
+v
+  rotate: true
+  xy: 2, 35
+  size: 33, 41
+  orig: 33, 41
+  offset: 0, 0
+  index: -1

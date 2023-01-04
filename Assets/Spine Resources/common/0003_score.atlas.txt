@@ -1,0 +1,27 @@
+
+0003_score.png
+size: 256,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+score
+  rotate: false
+  xy: 103, 52
+  size: 69, 70
+  orig: 69, 70
+  offset: 0, 0
+  index: -1
+score_glow
+  rotate: false
+  xy: 2, 52
+  size: 99, 98
+  orig: 99, 98
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: false
+  xy: 2, 2
+  size: 140, 48
+  orig: 140, 48
+  offset: 0, 0
+  index: -1

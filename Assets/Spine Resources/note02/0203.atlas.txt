@@ -1,0 +1,90 @@
+
+0203.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0203/images/fx
+  rotate: false
+  xy: 343, 46
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0203/images/line
+  rotate: false
+  xy: 2, 2
+  size: 273, 6
+  orig: 273, 6
+  offset: 0, 0
+  index: -1
+0203/images/sawtooth
+  rotate: true
+  xy: 2, 10
+  size: 144, 150
+  orig: 144, 150
+  offset: 0, 0
+  index: -1
+0203/images/scrap_1
+  rotate: false
+  xy: 154, 33
+  size: 65, 57
+  orig: 65, 57
+  offset: 0, 0
+  index: -1
+0203/images/scrap_2
+  rotate: false
+  xy: 277, 29
+  size: 64, 56
+  orig: 64, 56
+  offset: 0, 0
+  index: -1
+0203/images/scrap_3
+  rotate: true
+  xy: 221, 17
+  size: 67, 51
+  orig: 67, 51
+  offset: 0, 0
+  index: -1
+0203/images/scrap_4
+  rotate: false
+  xy: 343, 10
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+0203/images/scrap_5
+  rotate: false
+  xy: 277, 87
+  size: 61, 67
+  orig: 61, 67
+  offset: 0, 0
+  index: -1
+0203/images/scrap_6
+  rotate: false
+  xy: 221, 86
+  size: 52, 68
+  orig: 52, 68
+  offset: 0, 0
+  index: -1
+0203/images/scrap_7
+  rotate: true
+  xy: 154, 92
+  size: 62, 59
+  orig: 62, 59
+  offset: 0, 0
+  index: -1
+0203/images/scrap_8
+  rotate: true
+  xy: 340, 98
+  size: 56, 64
+  orig: 56, 64
+  offset: 0, 0
+  index: -1
+0203/images/smoke
+  rotate: false
+  xy: 154, 12
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1

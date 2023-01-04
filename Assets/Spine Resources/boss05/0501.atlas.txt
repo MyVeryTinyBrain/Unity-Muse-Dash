@@ -1,0 +1,272 @@
+
+0501.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+R1_Fx1
+  rotate: false
+  xy: 216, 19
+  size: 161, 161
+  orig: 161, 161
+  offset: 0, 0
+  index: -1
+R1_Fx2
+  rotate: false
+  xy: 1144, 253
+  size: 97, 111
+  orig: 97, 111
+  offset: 0, 0
+  index: -1
+bossA_body
+  rotate: true
+  xy: 960, 364
+  size: 146, 128
+  orig: 146, 128
+  offset: 0, 0
+  index: -1
+bossA_eyes_left
+  rotate: true
+  xy: 243, 5
+  size: 12, 22
+  orig: 12, 22
+  offset: 0, 0
+  index: -1
+bossA_eyes_right
+  rotate: true
+  xy: 267, 5
+  size: 12, 22
+  orig: 12, 22
+  offset: 0, 0
+  index: -1
+bossA_mouth
+  rotate: true
+  xy: 1260, 183
+  size: 83, 46
+  orig: 83, 46
+  offset: 0, 0
+  index: -1
+bossB_body
+  rotate: true
+  xy: 894, 84
+  size: 148, 136
+  orig: 148, 136
+  offset: 0, 0
+  index: -1
+bossB_eyes_left
+  rotate: true
+  xy: 355, 185
+  size: 19, 25
+  orig: 19, 25
+  offset: 0, 0
+  index: -1
+bossB_eyes_right
+  rotate: true
+  xy: 216, 2
+  size: 15, 25
+  orig: 15, 25
+  offset: 0, 0
+  index: -1
+bossB_mouth
+  rotate: true
+  xy: 944, 4
+  size: 78, 48
+  orig: 78, 48
+  offset: 0, 0
+  index: -1
+boss_glass
+  rotate: true
+  xy: 1090, 366
+  size: 144, 62
+  orig: 144, 62
+  offset: 0, 0
+  index: -1
+boss_hand
+  rotate: false
+  xy: 379, 4
+  size: 77, 24
+  orig: 77, 24
+  offset: 0, 0
+  index: -1
+cannon_A
+  rotate: true
+  xy: 863, 4
+  size: 69, 79
+  orig: 69, 79
+  offset: 0, 0
+  index: -1
+cannon_B_1
+  rotate: false
+  xy: 584, 11
+  size: 92, 217
+  orig: 92, 217
+  offset: 0, 0
+  index: -1
+cannon_B_2
+  rotate: true
+  xy: 263, 184
+  size: 20, 90
+  orig: 20, 90
+  offset: 0, 0
+  index: -1
+cannon_foot_1
+  rotate: false
+  xy: 1182, 7
+  size: 61, 111
+  orig: 61, 111
+  offset: 0, 0
+  index: -1
+cannon_foot_2
+  rotate: true
+  xy: 1260, 126
+  size: 55, 52
+  orig: 55, 52
+  offset: 0, 0
+  index: -1
+cap1
+  rotate: true
+  xy: 1032, 100
+  size: 138, 117
+  orig: 138, 117
+  offset: 0, 0
+  index: -1
+cap_2
+  rotate: true
+  xy: 1151, 120
+  size: 131, 107
+  orig: 131, 107
+  offset: 0, 0
+  index: -1
+car_bg_1
+  rotate: true
+  xy: 960, 235
+  size: 127, 65
+  orig: 127, 65
+  offset: 0, 0
+  index: -1
+car_bg_2
+  rotate: true
+  xy: 2, 6
+  size: 174, 212
+  orig: 174, 212
+  offset: 0, 0
+  index: -1
+car_body_1
+  rotate: false
+  xy: 2, 182
+  size: 259, 328
+  orig: 259, 328
+  offset: 0, 0
+  index: -1
+car_body_2
+  rotate: false
+  xy: 543, 230
+  size: 236, 280
+  orig: 236, 280
+  offset: 0, 0
+  index: -1
+car_body_3
+  rotate: true
+  xy: 1078, 5
+  size: 93, 102
+  orig: 93, 102
+  offset: 0, 0
+  index: -1
+car_body_4
+  rotate: true
+  xy: 1243, 268
+  size: 107, 55
+  orig: 107, 55
+  offset: 0, 0
+  index: -1
+car_end
+  rotate: false
+  xy: 543, 191
+  size: 27, 37
+  orig: 27, 37
+  offset: 0, 0
+  index: -1
+car_light
+  rotate: true
+  xy: 994, 5
+  size: 77, 82
+  orig: 77, 82
+  offset: 0, 0
+  index: -1
+connon_body
+  rotate: true
+  xy: 1027, 240
+  size: 122, 115
+  orig: 122, 115
+  offset: 0, 0
+  index: -1
+fx_fire
+  rotate: true
+  xy: 879, 234
+  size: 276, 79
+  orig: 276, 79
+  offset: 0, 0
+  index: -1
+multi_hit_1
+  rotate: false
+  xy: 263, 206
+  size: 278, 304
+  orig: 278, 304
+  offset: 0, 0
+  index: -1
+multi_hit_2
+  rotate: false
+  xy: 678, 12
+  size: 71, 216
+  orig: 71, 216
+  offset: 0, 0
+  index: -1
+shadow
+  rotate: true
+  xy: 781, 230
+  size: 280, 96
+  orig: 280, 96
+  offset: 0, 0
+  index: -1
+wheel1
+  rotate: false
+  xy: 1245, 8
+  size: 110, 110
+  orig: 110, 110
+  offset: 0, 0
+  index: -1
+wheel_2
+  rotate: false
+  xy: 1246, 412
+  size: 98, 98
+  orig: 98, 98
+  offset: 0, 0
+  index: -1
+wheel_cover1
+  rotate: false
+  xy: 379, 30
+  size: 203, 153
+  orig: 203, 153
+  offset: 0, 0
+  index: -1
+wheel_cover1_bg
+  rotate: true
+  xy: 1154, 377
+  size: 133, 90
+  orig: 133, 90
+  offset: 0, 0
+  index: -1
+wheel_cover2
+  rotate: true
+  xy: 751, 75
+  size: 153, 141
+  orig: 153, 141
+  offset: 0, 0
+  index: -1
+wheel_cover2_bg
+  rotate: false
+  xy: 751, 3
+  size: 110, 70
+  orig: 110, 70
+  offset: 0, 0
+  index: -1

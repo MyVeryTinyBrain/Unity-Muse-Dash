@@ -1,0 +1,405 @@
+
+char_8_marisa_fail.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+MLD_hand_R
+  rotate: true
+  xy: 176, 317
+  size: 135, 267
+  orig: 135, 267
+  offset: 0, 0
+  index: -1
+MLS_Braid
+  rotate: true
+  xy: 4, 13
+  size: 87, 130
+  orig: 87, 130
+  offset: 0, 0
+  index: -1
+MLS_Braid_bow
+  rotate: false
+  xy: 1647, 21
+  size: 94, 68
+  orig: 94, 68
+  offset: 0, 0
+  index: -1
+MLS_Hair_1
+  rotate: false
+  xy: 220, 561
+  size: 93, 115
+  orig: 93, 115
+  offset: 0, 0
+  index: -1
+MLS_Hair_2
+  rotate: true
+  xy: 277, 15
+  size: 121, 139
+  orig: 121, 139
+  offset: 0, 0
+  index: -1
+MLS_Hair_3
+  rotate: false
+  xy: 1335, 272
+  size: 195, 250
+  orig: 195, 250
+  offset: 0, 0
+  index: -1
+MLS_Hair_4
+  rotate: true
+  xy: 316, 204
+  size: 138, 180
+  orig: 138, 180
+  offset: 0, 0
+  index: -1
+MLS_Hair_5
+  rotate: true
+  xy: 756, 87
+  size: 147, 286
+  orig: 147, 286
+  offset: 0, 0
+  index: -1
+MLS_Hair_6
+  rotate: 270
+  xy: 1339, 601
+  size: 448, 328
+  orig: 448, 328
+  offset: 0, 0
+  index: -1
+MLS_Hair_6_shadow
+  rotate: false
+  xy: 683, 188
+  size: 229, 221
+  orig: 229, 230
+  offset: 0, 9
+  index: -1
+MLS_Hair_7
+  rotate: 180
+  xy: 1118, 60
+  size: 141, 152
+  orig: 141, 152
+  offset: 0, 0
+  index: -1
+MLS_Hair_8
+  rotate: 270
+  xy: 983, 407
+  size: 341, 349
+  orig: 341, 349
+  offset: 0, 0
+  index: -1
+MLS_Hair_9
+  rotate: false
+  xy: 910, 254
+  size: 250, 209
+  orig: 250, 209
+  offset: 0, 0
+  index: -1
+MLS_Hat_Brim
+  rotate: 180
+  xy: 352, 111
+  size: 663, 391
+  orig: 663, 391
+  offset: 0, 0
+  index: -1
+MLS_Hat_Star
+  rotate: false
+  xy: 1245, 28
+  size: 109, 97
+  orig: 109, 97
+  offset: 0, 0
+  index: -1
+MLS_Hat_after
+  rotate: false
+  xy: 4, 643
+  size: 598, 407
+  orig: 598, 407
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_1
+  rotate: 270
+  xy: 1490, 279
+  size: 349, 333
+  orig: 349, 333
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_2
+  rotate: false
+  xy: 1037, 159
+  size: 301, 241
+  orig: 301, 241
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_1
+  rotate: 180
+  xy: 449, 323
+  size: 530, 354
+  orig: 530, 356
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_2
+  rotate: false
+  xy: 1813, 51
+  size: 152, 86
+  orig: 152, 86
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_after
+  rotate: 180
+  xy: 415, 658
+  size: 571, 391
+  orig: 571, 391
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_after_B
+  rotate: false
+  xy: 448, 28
+  size: 175, 88
+  orig: 175, 88
+  offset: 0, 0
+  index: -1
+MLS_Hat_tip_1
+  rotate: true
+  xy: 257, 428
+  size: 317, 307
+  orig: 317, 307
+  offset: 0, 0
+  index: -1
+MLS_Hat_tip_2
+  rotate: 270
+  xy: 1651, 78
+  size: 138, 159
+  orig: 138, 159
+  offset: 0, 0
+  index: -1
+MLS_Hat_tip_3
+  rotate: false
+  xy: 627, 57
+  size: 176, 106
+  orig: 176, 106
+  offset: 0, 0
+  index: -1
+MLS_Streamer_L
+  rotate: true
+  xy: 1254, 514
+  size: 180, 156
+  orig: 180, 156
+  offset: 0, 0
+  index: -1
+MLS_Streamer_R
+  rotate: true
+  xy: 1358, 45
+  size: 124, 180
+  orig: 124, 180
+  offset: 0, 0
+  index: -1
+MLS_angry
+  rotate: true
+  xy: 1827, 308
+  size: 178, 194
+  orig: 178, 194
+  offset: 0, 0
+  index: -1
+MLS_bandage
+  rotate: false
+  xy: 1692, 179
+  size: 231, 133
+  orig: 231, 133
+  offset: 0, 0
+  index: -1
+MLS_body_apron
+  rotate: false
+  xy: 529, 485
+  size: 170, 184
+  orig: 170, 184
+  offset: 0, 0
+  index: -1
+MLS_body_bow
+  rotate: true
+  xy: 1922, 141
+  size: 164, 113
+  orig: 164, 113
+  offset: 0, 0
+  index: -1
+MLS_body_skirt
+  rotate: false
+  xy: 1615, 490
+  size: 311, 236
+  orig: 311, 236
+  offset: 0, 0
+  index: -1
+MLS_broom_Pole
+  rotate: true
+  xy: 1961, 506
+  size: 544, 64
+  orig: 544, 64
+  offset: 0, 0
+  index: -1
+MLS_broom_bow
+  rotate: true
+  xy: 4, 149
+  size: 208, 290
+  orig: 208, 290
+  offset: 0, 0
+  index: -1
+MLS_broom_tail_1
+  rotate: 180
+  xy: 972, 697
+  size: 444, 353
+  orig: 444, 356
+  offset: 0, 0
+  index: -1
+MLS_broom_tail_2
+  rotate: 270
+  xy: 58, 74
+  size: 120, 142
+  orig: 120, 142
+  offset: 0, 0
+  index: -1
+MLS_collar
+  rotate: false
+  xy: 1899, 659
+  size: 79, 67
+  orig: 79, 67
+  offset: 0, 0
+  index: -1
+MLS_eye_L
+  rotate: 180
+  xy: 550, 977
+  size: 144, 73
+  orig: 144, 73
+  offset: 0, 0
+  index: -1
+MLS_eye_R
+  rotate: false
+  xy: 898, 516
+  size: 89, 70
+  orig: 89, 70
+  offset: 0, 0
+  index: -1
+MLS_eyebrow
+  rotate: false
+  xy: 1143, 1025
+  size: 119, 24
+  orig: 119, 24
+  offset: 0, 0
+  index: -1
+MLS_eyebrow_L
+  rotate: false
+  xy: 4, 1009
+  size: 104, 40
+  orig: 104, 40
+  offset: 0, 0
+  index: -1
+MLS_face
+  rotate: true
+  xy: 1671, 730
+  size: 319, 286
+  orig: 319, 286
+  offset: 0, 0
+  index: -1
+MLS_face_line
+  rotate: false
+  xy: 1068, 991
+  size: 71, 58
+  orig: 71, 58
+  offset: 0, 0
+  index: -1
+MLS_face_shadow
+  rotate: true
+  xy: 4, 321
+  size: 319, 212
+  orig: 319, 212
+  offset: 0, 0
+  index: -1
+MLS_hand_L
+  rotate: false
+  xy: 800, 64
+  size: 182, 83
+  orig: 182, 83
+  offset: 0, 0
+  index: -1
+MLS_light_1
+  rotate: false
+  xy: 1266, 1018
+  size: 39, 31
+  orig: 39, 34
+  offset: 0, 0
+  index: -1
+MLS_light_2
+  rotate: false
+  xy: 700, 599
+  size: 101, 55
+  orig: 102, 55
+  offset: 0, 0
+  index: -1
+MLS_light_3
+  rotate: false
+  xy: 900, 1017
+  size: 43, 32
+  orig: 43, 32
+  offset: 0, 0
+  index: -1
+MLS_line
+  rotate: false
+  xy: 112, 1024
+  size: 50, 25
+  orig: 50, 25
+  offset: 0, 0
+  index: -1
+MLS_mouth
+  rotate: false
+  xy: 166, 1036
+  size: 17, 13
+  orig: 17, 13
+  offset: 0, 0
+  index: -1
+MLS_necktie
+  rotate: false
+  xy: 1969, 13
+  size: 63, 124
+  orig: 63, 124
+  offset: 0, 0
+  index: -1
+MLS_nose
+  rotate: false
+  xy: 187, 1045
+  size: 3, 4
+  orig: 3, 4
+  offset: 0, 0
+  index: -1
+MLS_sleeve_L
+  rotate: true
+  xy: 226, 75
+  size: 129, 136
+  orig: 129, 136
+  offset: 0, 0
+  index: -1
+foot_L_leg
+  rotate: true
+  xy: 1032, 5
+  size: 92, 94
+  orig: 92, 94
+  offset: 0, 0
+  index: -1
+foot_L_shoes
+  rotate: false
+  xy: 1505, 131
+  size: 142, 160
+  orig: 142, 160
+  offset: 0, 0
+  index: -1
+foot_R_leg
+  rotate: false
+  xy: 1542, 29
+  size: 101, 98
+  orig: 101, 98
+  offset: 0, 0
+  index: -1
+foot_R_shoes
+  rotate: true
+  xy: 1262, 140
+  size: 128, 174
+  orig: 128, 174
+  offset: 0, 0
+  index: -1

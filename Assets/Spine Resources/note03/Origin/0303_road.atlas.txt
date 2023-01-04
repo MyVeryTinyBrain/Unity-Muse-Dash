@@ -1,0 +1,97 @@
+
+0303_road.png
+size: 148,590
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0303/images_road/fx
+  rotate: false
+  xy: 67, 2
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0303/images_road/line
+  rotate: true
+  xy: 139, 11
+  size: 273, 6
+  orig: 273, 6
+  offset: 0, 0
+  index: -1
+0303/images_road/sawtooth
+  rotate: false
+  xy: 2, 438
+  size: 144, 150
+  orig: 144, 150
+  offset: 0, 0
+  index: -1
+0303/images_road/sawtooth_hexie
+  rotate: false
+  xy: 2, 286
+  size: 144, 150
+  orig: 144, 150
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_1
+  rotate: false
+  xy: 71, 165
+  size: 67, 58
+  orig: 67, 58
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_2
+  rotate: false
+  xy: 56, 107
+  size: 65, 56
+  orig: 65, 56
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_3
+  rotate: false
+  xy: 68, 54
+  size: 67, 51
+  orig: 67, 51
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_4
+  rotate: false
+  xy: 2, 13
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_5
+  rotate: true
+  xy: 2, 223
+  size: 61, 67
+  orig: 61, 67
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_6
+  rotate: false
+  xy: 2, 149
+  size: 52, 72
+  orig: 52, 72
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_7
+  rotate: false
+  xy: 71, 225
+  size: 66, 59
+  orig: 66, 59
+  offset: 0, 0
+  index: -1
+0303/images_road/scrap_8
+  rotate: true
+  xy: 2, 49
+  size: 56, 64
+  orig: 56, 64
+  offset: 0, 0
+  index: -1
+0303/images_road/smoke
+  rotate: false
+  xy: 42, 28
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1

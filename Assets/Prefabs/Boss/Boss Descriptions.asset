@@ -1,0 +1,680 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14ab06bdf24059449b66effbd641edc7, type: 3}
+  m_Name: Boss Descriptions
+  m_EditorClassIdentifier: 
+  descs:
+  - mapType: 0
+    spineAsset: {fileID: 11400000, guid: d33af04bc1b33274d81511b695fdb30a, type: 2}
+    skin: default
+    weapon1Effect: {fileID: 0}
+    weapon1EffectSpawnBone: 
+    weapon2Effect: {fileID: 9126493869430305181, guid: 5d4de45da113f2d439731086a84ca988, type: 3}
+    weapon2EffectSpawnBone: R1_fx
+    animationDescs:
+    - animationType: -1
+      subData:
+        state: 1
+        loop: 0
+      animationName: outside
+    - animationType: 0
+      subData:
+        state: 0
+        loop: 0
+      animationName: in
+    - animationType: 1
+      subData:
+        state: 1
+        loop: 0
+      animationName: out
+    - animationType: 2
+      subData:
+        state: 1
+        loop: 1
+      animationName: outside
+    - animationType: 3
+      subData:
+        state: 0
+        loop: 1
+      animationName: standby
+    - animationType: 4
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_start
+    - animationType: 5
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2_start
+    - animationType: 6
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_1_end
+    - animationType: 7
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_2_end
+    - animationType: 8
+      subData:
+        state: 2
+        loop: 1
+      animationName: far_atk_1_standby
+    - animationType: 9
+      subData:
+        state: 3
+        loop: 1
+      animationName: far_atk_2_standby
+    - animationType: 10
+      subData:
+        state: 3
+        loop: 0
+      animationName: atk_1_to_2
+    - animationType: 11
+      subData:
+        state: 2
+        loop: 0
+      animationName: atk_2_to_1
+    - animationType: 12
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_air
+    - animationType: 13
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_road
+    - animationType: 14
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2
+    - animationType: 15
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_1_48
+    - animationType: 16
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_2_24
+    - animationType: 17
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_48
+    - animationType: 18
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_48_end
+    - animationType: 19
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt
+    - animationType: 20
+      subData:
+        state: 0
+        loop: 0
+      animationName: hurt
+    - animationType: 21
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt_end
+    - animationType: 22
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_end
+    - animationType: 23
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_out
+  - mapType: 1
+    spineAsset: {fileID: 11400000, guid: 25b870b8413c90f4d87159ca6dd26da9, type: 2}
+    skin: default
+    weapon1Effect: {fileID: 9126493869430305181, guid: 5d4de45da113f2d439731086a84ca988, type: 3}
+    weapon1EffectSpawnBone: weapon_2
+    weapon2Effect: {fileID: 9126493869430305181, guid: 5d4de45da113f2d439731086a84ca988, type: 3}
+    weapon2EffectSpawnBone: farA_atk_1
+    animationDescs:
+    - animationType: -1
+      subData:
+        state: 1
+        loop: 0
+      animationName: outside
+    - animationType: 0
+      subData:
+        state: 0
+        loop: 0
+      animationName: in
+    - animationType: 1
+      subData:
+        state: 1
+        loop: 0
+      animationName: out
+    - animationType: 2
+      subData:
+        state: 1
+        loop: 1
+      animationName: outside
+    - animationType: 3
+      subData:
+        state: 0
+        loop: 1
+      animationName: standby
+    - animationType: 4
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_start
+    - animationType: 5
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2_start
+    - animationType: 6
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_1_end
+    - animationType: 7
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_2_end
+    - animationType: 8
+      subData:
+        state: 2
+        loop: 1
+      animationName: far_atk_1_standby
+    - animationType: 9
+      subData:
+        state: 3
+        loop: 1
+      animationName: far_atk_2_standby
+    - animationType: 10
+      subData:
+        state: 3
+        loop: 0
+      animationName: atk_1_to_2
+    - animationType: 11
+      subData:
+        state: 2
+        loop: 0
+      animationName: atk_2_to_1
+    - animationType: 12
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 13
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 14
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2
+    - animationType: 15
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_1_48
+    - animationType: 16
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_2_24
+    - animationType: 17
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_48
+    - animationType: 18
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_48_end
+    - animationType: 19
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt
+    - animationType: 20
+      subData:
+        state: 0
+        loop: 0
+      animationName: hurt
+    - animationType: 21
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt_end
+    - animationType: 22
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_end
+    - animationType: 23
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_out
+  - mapType: 2
+    spineAsset: {fileID: 11400000, guid: f335f201fbd5b3a408f6c592066dd7ef, type: 2}
+    skin: origin
+    weapon1Effect: {fileID: 0}
+    weapon1EffectSpawnBone: 
+    weapon2Effect: {fileID: 0}
+    weapon2EffectSpawnBone: 
+    animationDescs:
+    - animationType: -1
+      subData:
+        state: 1
+        loop: 0
+      animationName: outside
+    - animationType: 0
+      subData:
+        state: 0
+        loop: 0
+      animationName: in
+    - animationType: 1
+      subData:
+        state: 1
+        loop: 0
+      animationName: out
+    - animationType: 2
+      subData:
+        state: 1
+        loop: 1
+      animationName: outside
+    - animationType: 3
+      subData:
+        state: 0
+        loop: 1
+      animationName: standby
+    - animationType: 4
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_start
+    - animationType: 5
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2_start
+    - animationType: 6
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_1_end
+    - animationType: 7
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_2_end
+    - animationType: 8
+      subData:
+        state: 2
+        loop: 1
+      animationName: far_atk_1_standby
+    - animationType: 9
+      subData:
+        state: 3
+        loop: 1
+      animationName: far_atk_2_standby
+    - animationType: 10
+      subData:
+        state: 3
+        loop: 0
+      animationName: atk_1_to_2
+    - animationType: 11
+      subData:
+        state: 2
+        loop: 0
+      animationName: atk_2_to_1
+    - animationType: 12
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 13
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 14
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2
+    - animationType: 15
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_1_48
+    - animationType: 16
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_2_24
+    - animationType: 17
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_48
+    - animationType: 18
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_48_end
+    - animationType: 19
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt
+    - animationType: 20
+      subData:
+        state: 0
+        loop: 0
+      animationName: hurt
+    - animationType: 21
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt_end
+    - animationType: 22
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_end
+    - animationType: 23
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_out
+  - mapType: 3
+    spineAsset: {fileID: 11400000, guid: e56daa6300259e941b9d9d1a72832ec2, type: 2}
+    skin: default
+    weapon1Effect: {fileID: 0}
+    weapon1EffectSpawnBone: 
+    weapon2Effect: {fileID: 0}
+    weapon2EffectSpawnBone: 
+    animationDescs:
+    - animationType: -1
+      subData:
+        state: 1
+        loop: 0
+      animationName: outside
+    - animationType: 0
+      subData:
+        state: 0
+        loop: 0
+      animationName: in
+    - animationType: 1
+      subData:
+        state: 1
+        loop: 0
+      animationName: out
+    - animationType: 2
+      subData:
+        state: 1
+        loop: 1
+      animationName: outside
+    - animationType: 3
+      subData:
+        state: 0
+        loop: 1
+      animationName: standby
+    - animationType: 4
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_start
+    - animationType: 5
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2_start
+    - animationType: 6
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_1_end
+    - animationType: 7
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_2_end
+    - animationType: 8
+      subData:
+        state: 2
+        loop: 1
+      animationName: far_atk_1_standby
+    - animationType: 9
+      subData:
+        state: 3
+        loop: 1
+      animationName: far_atk_2_standby
+    - animationType: 10
+      subData:
+        state: 3
+        loop: 0
+      animationName: atk_1_to_2
+    - animationType: 11
+      subData:
+        state: 2
+        loop: 0
+      animationName: atk_2_to_1
+    - animationType: 12
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 13
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 14
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2
+    - animationType: 15
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_1_48
+    - animationType: 16
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_2_24
+    - animationType: 17
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_48
+    - animationType: 18
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_48_end
+    - animationType: 19
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt
+    - animationType: 20
+      subData:
+        state: 0
+        loop: 0
+      animationName: hurt
+    - animationType: 21
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt_end
+    - animationType: 22
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_end
+    - animationType: 23
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_out
+  - mapType: 4
+    spineAsset: {fileID: 11400000, guid: 71619268d95f3234f9e3d9cb45381d4b, type: 2}
+    skin: default
+    weapon1Effect: {fileID: 0}
+    weapon1EffectSpawnBone: 
+    weapon2Effect: {fileID: 0}
+    weapon2EffectSpawnBone: 
+    animationDescs:
+    - animationType: -1
+      subData:
+        state: 1
+        loop: 0
+      animationName: outside
+    - animationType: 0
+      subData:
+        state: 0
+        loop: 0
+      animationName: in
+    - animationType: 1
+      subData:
+        state: 1
+        loop: 0
+      animationName: out
+    - animationType: 2
+      subData:
+        state: 1
+        loop: 1
+      animationName: outside
+    - animationType: 3
+      subData:
+        state: 0
+        loop: 1
+      animationName: standby
+    - animationType: 4
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1_start
+    - animationType: 5
+      subData:
+        state: 3
+        loop: 0
+      animationName: standby
+    - animationType: 6
+      subData:
+        state: 0
+        loop: 0
+      animationName: far_atk_1_end
+    - animationType: 7
+      subData:
+        state: 0
+        loop: 0
+      animationName: standby
+    - animationType: 8
+      subData:
+        state: 2
+        loop: 1
+      animationName: far_atk_1_standby
+    - animationType: 9
+      subData:
+        state: 3
+        loop: 1
+      animationName: standby
+    - animationType: 10
+      subData:
+        state: 3
+        loop: 0
+      animationName: atk_1_to_2
+    - animationType: 11
+      subData:
+        state: 2
+        loop: 0
+      animationName: atk_2_to_1
+    - animationType: 12
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 13
+      subData:
+        state: 2
+        loop: 0
+      animationName: far_atk_1
+    - animationType: 14
+      subData:
+        state: 3
+        loop: 0
+      animationName: far_atk_2
+    - animationType: 15
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_1_48
+    - animationType: 16
+      subData:
+        state: 0
+        loop: 0
+      animationName: close_atk_2_24
+    - animationType: 17
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_48
+    - animationType: 18
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_48_end
+    - animationType: 19
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt
+    - animationType: 20
+      subData:
+        state: 0
+        loop: 0
+      animationName: hurt
+    - animationType: 21
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_hurt_end
+    - animationType: 22
+      subData:
+        state: 1
+        loop: 0
+      animationName: multi_atk_end
+    - animationType: 23
+      subData:
+        state: 0
+        loop: 0
+      animationName: multi_atk_out

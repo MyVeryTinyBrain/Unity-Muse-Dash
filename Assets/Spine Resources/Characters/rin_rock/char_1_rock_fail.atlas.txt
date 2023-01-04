@@ -1,0 +1,160 @@
+
+char_1_rock_fail.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+bunny_images/hair_B
+  rotate: true
+  xy: 1050, 215
+  size: 128, 119
+  orig: 128, 119
+  offset: 0, 0
+  index: -1
+rock_images/body
+  rotate: true
+  xy: 2, 78
+  size: 429, 274
+  orig: 429, 274
+  offset: 0, 0
+  index: -1
+rock_images/coat_L
+  rotate: false
+  xy: 801, 304
+  size: 194, 203
+  orig: 194, 205
+  offset: 0, 0
+  index: -1
+rock_images/coat_R
+  rotate: true
+  xy: 801, 203
+  size: 99, 159
+  orig: 115, 159
+  offset: 0, 0
+  index: -1
+rock_images/eye_L
+  rotate: true
+  xy: 226, 3
+  size: 73, 58
+  orig: 73, 58
+  offset: 0, 0
+  index: -1
+rock_images/eye_R
+  rotate: true
+  xy: 375, 17
+  size: 60, 42
+  orig: 60, 57
+  offset: 0, 0
+  index: -1
+rock_images/eyebrow_L
+  rotate: true
+  xy: 320, 14
+  size: 63, 53
+  orig: 63, 53
+  offset: 0, 0
+  index: -1
+rock_images/eyebrow_R
+  rotate: true
+  xy: 419, 38
+  size: 39, 45
+  orig: 39, 45
+  offset: 0, 0
+  index: -1
+rock_images/feet_R
+  rotate: false
+  xy: 1032, 65
+  size: 128, 148
+  orig: 140, 148
+  offset: 12, 0
+  index: -1
+rock_images/hair_A
+  rotate: false
+  xy: 997, 345
+  size: 54, 162
+  orig: 54, 162
+  offset: 0, 0
+  index: -1
+rock_images/hair_B
+  rotate: true
+  xy: 1053, 380
+  size: 127, 118
+  orig: 127, 118
+  offset: 0, 0
+  index: -1
+rock_images/hair_C
+  rotate: true
+  xy: 962, 215
+  size: 87, 86
+  orig: 87, 86
+  offset: 0, 0
+  index: -1
+rock_images/hair_D
+  rotate: true
+  xy: 2, 2
+  size: 74, 222
+  orig: 74, 225
+  offset: 0, 3
+  index: -1
+rock_images/hair_tail
+  rotate: false
+  xy: 581, 25
+  size: 210, 167
+  orig: 210, 167
+  offset: 0, 0
+  index: -1
+rock_images/hand_L
+  rotate: true
+  xy: 278, 79
+  size: 112, 190
+  orig: 112, 190
+  offset: 0, 0
+  index: -1
+rock_images/hand_R
+  rotate: false
+  xy: 470, 17
+  size: 109, 174
+  orig: 109, 174
+  offset: 0, 0
+  index: -1
+rock_images/head
+  rotate: true
+  xy: 508, 194
+  size: 313, 291
+  orig: 313, 298
+  offset: 0, 7
+  index: -1
+rock_images/head_fx
+  rotate: false
+  xy: 997, 311
+  size: 50, 32
+  orig: 50, 32
+  offset: 0, 0
+  index: -1
+rock_images/leg_L
+  rotate: true
+  xy: 278, 193
+  size: 314, 228
+  orig: 314, 228
+  offset: 0, 0
+  index: -1
+rock_images/leg_R
+  rotate: false
+  xy: 793, 27
+  size: 237, 165
+  orig: 237, 165
+  offset: 0, 0
+  index: -1
+rock_images/mouth
+  rotate: true
+  xy: 286, 12
+  size: 65, 32
+  orig: 65, 32
+  offset: 0, 0
+  index: -1
+rock_images/nose
+  rotate: true
+  xy: 286, 5
+  size: 5, 4
+  orig: 5, 4
+  offset: 0, 0
+  index: -1

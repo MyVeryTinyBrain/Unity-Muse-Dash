@@ -1,0 +1,524 @@
+
+8_marisa_victory.png
+size: 2048,2048
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+MLS_Braid_D
+  rotate: 180
+  xy: 1914, 41
+  size: 117, 97
+  orig: 117, 97
+  offset: 0, 0
+  index: -1
+MLS_Braid_U
+  rotate: true
+  xy: 4, 950
+  size: 123, 144
+  orig: 123, 144
+  offset: 0, 0
+  index: -1
+MLS_Braid_bow
+  rotate: false
+  xy: 1417, 429
+  size: 81, 72
+  orig: 81, 72
+  offset: 0, 0
+  index: -1
+MLS_Broom
+  rotate: 180
+  xy: 49, 187
+  size: 1120, 886
+  orig: 1120, 886
+  offset: 0, 0
+  index: -1
+MLS_Broom_bow
+  rotate: true
+  xy: 797, 265
+  size: 298, 266
+  orig: 299, 266
+  offset: 1, 0
+  index: -1
+MLS_Hair_Bangs_A
+  rotate: false
+  xy: 1535, 36
+  size: 105, 152
+  orig: 105, 152
+  offset: 0, 0
+  index: -1
+MLS_Hair_Bangs_B
+  rotate: true
+  xy: 1774, 65
+  size: 90, 177
+  orig: 90, 179
+  offset: 0, 0
+  index: -1
+MLS_Hair_Bangs_C
+  rotate: true
+  xy: 4, 75
+  size: 101, 170
+  orig: 101, 170
+  offset: 0, 0
+  index: -1
+MLS_Hair_Late_A
+  rotate: false
+  xy: 683, 422
+  size: 437, 322
+  orig: 437, 322
+  offset: 0, 0
+  index: -1
+MLS_Hair_Late_B
+  rotate: false
+  xy: 1279, 402
+  size: 407, 261
+  orig: 407, 262
+  offset: 0, 0
+  index: -1
+MLS_Hair_Late_C
+  rotate: false
+  xy: 1427, 591
+  size: 330, 483
+  orig: 330, 483
+  offset: 0, 0
+  index: -1
+MLS_Hair_Late_L_U
+  rotate: false
+  xy: 517, 222
+  size: 278, 193
+  orig: 278, 193
+  offset: 0, 0
+  index: -1
+MLS_Hair_Late_R_U
+  rotate: false
+  xy: 1454, 17
+  size: 80, 136
+  orig: 80, 136
+  offset: 0, 0
+  index: -1
+MLS_Hair_side_L
+  rotate: false
+  xy: 1616, 939
+  size: 124, 134
+  orig: 124, 134
+  offset: 0, 0
+  index: -1
+MLS_Hair_side_R
+  rotate: true
+  xy: 635, 1026
+  size: 47, 98
+  orig: 47, 100
+  offset: 0, 0
+  index: -1
+MLS_Hair_tail_A_B
+  rotate: 180
+  xy: 800, 151
+  size: 224, 160
+  orig: 224, 160
+  offset: 0, 0
+  index: -1
+MLS_Hair_tail_A_F
+  rotate: 270
+  xy: 34, 6
+  size: 102, 157
+  orig: 208, 261
+  offset: 0, 104
+  index: -1
+MLS_Hair_tail_B_B
+  rotate: false
+  xy: 1659, 197
+  size: 218, 131
+  orig: 218, 131
+  offset: 0, 0
+  index: -1
+MLS_Hair_tail_B_F
+  rotate: 270
+  xy: 256, 111
+  size: 166, 229
+  orig: 167, 230
+  offset: 1, 0
+  index: -1
+MLS_Hair_temples_L
+  rotate: true
+  xy: 778, 53
+  size: 117, 190
+  orig: 119, 190
+  offset: 2, 0
+  index: -1
+MLS_Hair_temples_R
+  rotate: false
+  xy: 983, 80
+  size: 197, 166
+  orig: 197, 166
+  offset: 0, 0
+  index: -1
+MLS_Hat_Eaves_A
+  rotate: 180
+  xy: 1121, 665
+  size: 302, 408
+  orig: 302, 408
+  offset: 0, 0
+  index: -1
+MLS_Hat_Eaves_B
+  rotate: true
+  xy: 223, 32
+  size: 85, 326
+  orig: 85, 326
+  offset: 0, 0
+  index: -1
+MLS_Hat_Eaves_C
+  rotate: false
+  xy: 291, 438
+  size: 197, 228
+  orig: 197, 228
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow
+  rotate: 270
+  xy: 738, 752
+  size: 59, 64
+  orig: 108, 70
+  offset: 0, 6
+  index: -1
+MLS_Hat_bow_L
+  rotate: false
+  xy: 1594, 110
+  size: 177, 101
+  orig: 177, 102
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_R
+  rotate: true
+  xy: 1427, 156
+  size: 147, 207
+  orig: 147, 207
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_Star_A
+  rotate: true
+  xy: 892, 988
+  size: 85, 101
+  orig: 85, 101
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_Star_B
+  rotate: 270
+  xy: 1975, 1016
+  size: 58, 63
+  orig: 58, 72
+  offset: 0, 9
+  index: -1
+MLS_Hat_bow_tape_L
+  rotate: 180
+  xy: 785, 11
+  size: 220, 146
+  orig: 220, 146
+  offset: 0, 0
+  index: -1
+MLS_Hat_bow_tape_R
+  rotate: false
+  xy: 1164, 16
+  size: 154, 79
+  orig: 154, 79
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_A
+  rotate: false
+  xy: 4, 354
+  size: 237, 232
+  orig: 237, 232
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_B
+  rotate: true
+  xy: 488, 77
+  size: 182, 274
+  orig: 182, 274
+  offset: 0, 0
+  index: -1
+MLS_Hat_lace_C
+  rotate: 180
+  xy: 649, 157
+  size: 176, 132
+  orig: 176, 132
+  offset: 0, 0
+  index: -1
+MLS_Hat_tail
+  rotate: true
+  xy: 1728, 761
+  size: 312, 299
+  orig: 312, 299
+  offset: 0, 0
+  index: -1
+MLS_background_Star_A
+  rotate: true
+  xy: 1881, 150
+  size: 127, 134
+  orig: 127, 134
+  offset: 0, 0
+  index: -1
+MLS_background_Star_B
+  rotate: false
+  xy: 1999, 864
+  size: 45, 47
+  orig: 45, 47
+  offset: 0, 0
+  index: -1
+MLS_background_Star_C
+  rotate: true
+  xy: 1321, 55
+  size: 106, 112
+  orig: 106, 112
+  offset: 0, 0
+  index: -1
+MLS_background_Star_D
+  rotate: false
+  xy: 1502, 307
+  size: 189, 198
+  orig: 189, 199
+  offset: 0, 0
+  index: -1
+MLS_body
+  rotate: false
+  xy: 1027, 203
+  size: 185, 172
+  orig: 185, 172
+  offset: 0, 0
+  index: -1
+MLS_body_NecklineL
+  rotate: false
+  xy: 4, 593
+  size: 89, 62
+  orig: 89, 62
+  offset: 0, 0
+  index: -1
+MLS_body_NecklineR
+  rotate: false
+  xy: 1966, 717
+  size: 77, 61
+  orig: 79, 61
+  offset: 2, 0
+  index: -1
+MLS_body_apron
+  rotate: 180
+  xy: 1732, 452
+  size: 282, 307
+  orig: 282, 322
+  offset: 0, 0
+  index: -1
+MLS_body_apron_belt
+  rotate: false
+  xy: 381, 922
+  size: 121, 151
+  orig: 121, 151
+  offset: 0, 0
+  index: -1
+MLS_body_apron_bow_B
+  rotate: true
+  xy: 541, 22
+  size: 107, 93
+  orig: 107, 93
+  offset: 0, 0
+  index: -1
+MLS_body_apron_bow_F
+  rotate: true
+  xy: 98, 100
+  size: 139, 155
+  orig: 317, 351
+  offset: 99, 196
+  index: -1
+MLS_body_apron_bow_tape_A
+  rotate: false
+  xy: 915, 242
+  size: 397, 218
+  orig: 397, 223
+  offset: 0, 0
+  index: -1
+MLS_body_apron_bow_tape_B
+  rotate: false
+  xy: 406, 306
+  size: 324, 215
+  orig: 324, 218
+  offset: 0, 3
+  index: -1
+MLS_body_chest
+  rotate: false
+  xy: 263, 203
+  size: 210, 175
+  orig: 210, 180
+  offset: 0, 2
+  index: -1
+MLS_body_collar_L
+  rotate: false
+  xy: 552, 518
+  size: 128, 66
+  orig: 128, 66
+  offset: 0, 0
+  index: -1
+MLS_body_collar_R
+  rotate: false
+  xy: 1977, 482
+  size: 66, 68
+  orig: 66, 68
+  offset: 0, 0
+  index: -1
+MLS_body_necktie
+  rotate: false
+  xy: 1753, 754
+  size: 122, 78
+  orig: 122, 83
+  offset: 0, 5
+  index: -1
+MLS_body_skirt
+  rotate: 180
+  xy: 392, 636
+  size: 367, 439
+  orig: 398, 455
+  offset: 30, 7
+  index: -1
+MLS_body_skirt_lace
+  rotate: false
+  xy: 4, 584
+  size: 392, 490
+  orig: 392, 490
+  offset: 0, 0
+  index: -1
+MLS_face
+  rotate: false
+  xy: 1315, 221
+  size: 174, 181
+  orig: 174, 181
+  offset: 0, 0
+  index: -1
+MLS_face_Eye_R
+  rotate: false
+  xy: 344, 1041
+  size: 51, 34
+  orig: 51, 34
+  offset: 0, 0
+  index: -1
+MLS_face_Eye_white_L
+  rotate: false
+  xy: 4, 1038
+  size: 53, 36
+  orig: 53, 36
+  offset: 0, 0
+  index: -1
+MLS_face_Eyeball_L
+  rotate: false
+  xy: 729, 1044
+  size: 38, 30
+  orig: 39, 30
+  offset: 1, 0
+  index: -1
+MLS_face_Eyelash_L_D
+  rotate: false
+  xy: 1559, 1058
+  size: 52, 16
+  orig: 54, 16
+  offset: 0, 0
+  index: -1
+MLS_face_eyebrow_L
+  rotate: false
+  xy: 1089, 1038
+  size: 39, 35
+  orig: 41, 36
+  offset: 1, 1
+  index: -1
+MLS_face_eyebrow_R
+  rotate: false
+  xy: 60, 1061
+  size: 22, 12
+  orig: 23, 12
+  offset: 0, 0
+  index: -1
+MLS_face_eyelash_L_U
+  rotate: false
+  xy: 1162, 1023
+  size: 90, 51
+  orig: 90, 54
+  offset: 0, 0
+  index: -1
+MLS_face_eyelash_L_U2
+  rotate: false
+  xy: 1142, 623
+  size: 89, 50
+  orig: 89, 53
+  offset: 0, 0
+  index: -1
+MLS_face_mouth
+  rotate: false
+  xy: 1384, 1036
+  size: 41, 38
+  orig: 41, 39
+  offset: 0, 0
+  index: -1
+MLS_face_nose
+  rotate: false
+  xy: 86, 1065
+  size: 9, 8
+  orig: 9, 9
+  offset: 0, 1
+  index: -1
+MLS_face_red_L
+  rotate: false
+  xy: 489, 1056
+  size: 30, 17
+  orig: 30, 18
+  offset: 0, 0
+  index: -1
+MLS_face_red_R
+  rotate: false
+  xy: 881, 1053
+  size: 24, 20
+  orig: 24, 20
+  offset: 0, 0
+  index: -1
+MLS_face_shadow
+  rotate: false
+  xy: 1163, 96
+  size: 169, 150
+  orig: 169, 151
+  offset: 0, 1
+  index: -1
+MLS_hand_Cuffs_L_B
+  rotate: false
+  xy: 442, 57
+  size: 98, 139
+  orig: 98, 139
+  offset: 0, 0
+  index: -1
+MLS_hand_Cuffs_L_F
+  rotate: true
+  xy: 1642, 9
+  size: 92, 141
+  orig: 93, 141
+  offset: 1, 0
+  index: -1
+MLS_hand_L
+  rotate: true
+  xy: 1717, 281
+  size: 206, 283
+  orig: 206, 283
+  offset: 0, 0
+  index: -1
+MLS_hand_sleeve_L
+  rotate: false
+  xy: 742, 887
+  size: 164, 186
+  orig: 164, 186
+  offset: 0, 0
+  index: -1
+MLS_head_neck
+  rotate: false
+  xy: 760, 843
+  size: 66, 65
+  orig: 66, 65
+  offset: 0, 0
+  index: -1
+MLS_leg
+  rotate: false
+  xy: 1064, 443
+  size: 508, 417
+  orig: 901, 451
+  offset: 0, 34
+  index: -1

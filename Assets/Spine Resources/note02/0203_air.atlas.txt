@@ -1,0 +1,83 @@
+
+0203_air.png
+size: 512,256
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+0203/images_air/fx
+  rotate: false
+  xy: 226, 116
+  size: 50, 50
+  orig: 50, 50
+  offset: 0, 0
+  index: -1
+0203/images_air/sawtooth
+  rotate: false
+  xy: 2, 98
+  size: 144, 150
+  orig: 144, 150
+  offset: 0, 0
+  index: -1
+0203/images_air/smoke
+  rotate: true
+  xy: 152, 4
+  size: 22, 19
+  orig: 22, 19
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_1
+  rotate: false
+  xy: 152, 28
+  size: 74, 74
+  orig: 74, 74
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_2
+  rotate: true
+  xy: 148, 164
+  size: 84, 58
+  orig: 84, 58
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_3
+  rotate: false
+  xy: 148, 104
+  size: 76, 58
+  orig: 76, 58
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_4
+  rotate: true
+  xy: 228, 2
+  size: 38, 34
+  orig: 38, 34
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_5
+  rotate: true
+  xy: 2, 6
+  size: 90, 83
+  orig: 90, 83
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_6
+  rotate: false
+  xy: 87, 8
+  size: 63, 88
+  orig: 63, 88
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_7
+  rotate: true
+  xy: 228, 42
+  size: 72, 69
+  orig: 72, 69
+  offset: 0, 0
+  index: -1
+0209/images_air/scrap_8
+  rotate: false
+  xy: 208, 168
+  size: 75, 80
+  orig: 75, 81
+  offset: 0, 1
+  index: -1

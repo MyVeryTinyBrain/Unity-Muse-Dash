@@ -1,0 +1,405 @@
+
+0101.png
+size: 2048,512
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+images/R1_Fx1
+  rotate: false
+  xy: 1394, 20
+  size: 161, 161
+  orig: 161, 161
+  offset: 0, 0
+  index: -1
+images/R1_Fx2
+  rotate: true
+  xy: 1686, 6
+  size: 97, 111
+  orig: 97, 111
+  offset: 0, 0
+  index: -1
+images/R1_Fx3
+  rotate: true
+  xy: 686, 53
+  size: 53, 138
+  orig: 53, 138
+  offset: 0, 0
+  index: -1
+images/Weapon_a_1
+  rotate: false
+  xy: 1892, 404
+  size: 107, 106
+  orig: 107, 106
+  offset: 0, 0
+  index: -1
+images/Weapon_a_2
+  rotate: false
+  xy: 958, 145
+  size: 126, 71
+  orig: 126, 71
+  offset: 0, 0
+  index: -1
+images/Weapon_b_1
+  rotate: false
+  xy: 193, 9
+  size: 144, 33
+  orig: 144, 33
+  offset: 0, 0
+  index: -1
+images/Weapon_b_2
+  rotate: false
+  xy: 826, 55
+  size: 108, 56
+  orig: 108, 56
+  offset: 0, 0
+  index: -1
+images/Weapon_b_3
+  rotate: true
+  xy: 1113, 4
+  size: 64, 128
+  orig: 64, 128
+  offset: 0, 0
+  index: -1
+images/Weapon_b_4
+  rotate: true
+  xy: 1557, 43
+  size: 138, 127
+  orig: 138, 127
+  offset: 0, 0
+  index: -1
+images/Weapon_b_fx
+  rotate: true
+  xy: 541, 20
+  size: 29, 110
+  orig: 29, 110
+  offset: 0, 0
+  index: -1
+images/Weapon_box
+  rotate: false
+  xy: 1200, 334
+  size: 219, 176
+  orig: 219, 176
+  offset: 0, 0
+  index: -1
+images/Weapon_box_bg
+  rotate: true
+  xy: 1016, 249
+  size: 77, 106
+  orig: 77, 106
+  offset: 0, 0
+  index: -1
+images/body
+  rotate: true
+  xy: 1124, 233
+  size: 93, 140
+  orig: 93, 140
+  offset: 0, 0
+  index: -1
+images/buruo_accessory
+  rotate: false
+  xy: 1283, 157
+  size: 83, 83
+  orig: 83, 83
+  offset: 0, 0
+  index: -1
+images/button_L_1
+  rotate: false
+  xy: 982, 218
+  size: 29, 27
+  orig: 29, 27
+  offset: 0, 0
+  index: -1
+images/button_L_2
+  rotate: false
+  xy: 997, 9
+  size: 42, 49
+  orig: 42, 49
+  offset: 0, 0
+  index: -1
+images/button_R_1
+  rotate: true
+  xy: 1013, 219
+  size: 26, 28
+  orig: 26, 28
+  offset: 0, 0
+  index: -1
+images/button_R_2
+  rotate: true
+  xy: 785, 4
+  size: 47, 54
+  orig: 47, 54
+  offset: 0, 0
+  index: -1
+images/eyes_1
+  rotate: false
+  xy: 1243, 18
+  size: 107, 65
+  orig: 107, 65
+  offset: 0, 0
+  index: -1
+images/eyes_2
+  rotate: false
+  xy: 1083, 70
+  size: 118, 73
+  orig: 118, 73
+  offset: 0, 0
+  index: -1
+images/eyes_3
+  rotate: false
+  xy: 1203, 85
+  size: 108, 70
+  orig: 108, 70
+  offset: 0, 0
+  index: -1
+images/fx_fire
+  rotate: false
+  xy: 738, 247
+  size: 276, 79
+  orig: 276, 79
+  offset: 0, 0
+  index: -1
+images/fx_fire_circle
+  rotate: true
+  xy: 2, 17
+  size: 25, 189
+  orig: 25, 189
+  offset: 0, 0
+  index: -1
+images/hair_1
+  rotate: true
+  xy: 1785, 397
+  size: 113, 105
+  orig: 113, 105
+  offset: 0, 0
+  index: -1
+images/hair_2
+  rotate: true
+  xy: 936, 60
+  size: 73, 145
+  orig: 73, 145
+  offset: 0, 0
+  index: -1
+images/hair_3
+  rotate: true
+  xy: 1086, 157
+  size: 63, 124
+  orig: 63, 124
+  offset: 0, 0
+  index: -1
+images/hand_L
+  rotate: true
+  xy: 871, 208
+  size: 37, 55
+  orig: 37, 55
+  offset: 0, 0
+  index: -1
+images/hand_R
+  rotate: false
+  xy: 841, 2
+  size: 62, 51
+  orig: 62, 51
+  offset: 0, 0
+  index: -1
+images/head
+  rotate: false
+  xy: 1744, 105
+  size: 211, 201
+  orig: 211, 201
+  offset: 0, 0
+  index: -1
+images/mouth
+  rotate: false
+  xy: 1313, 93
+  size: 79, 62
+  orig: 79, 62
+  offset: 0, 0
+  index: -1
+images/mouth_2
+  rotate: true
+  xy: 954, 7
+  size: 51, 41
+  orig: 51, 41
+  offset: 0, 0
+  index: -1
+images/mouth_3
+  rotate: true
+  xy: 1067, 222
+  size: 25, 22
+  orig: 25, 22
+  offset: 0, 0
+  index: -1
+images/mouth_hurt
+  rotate: false
+  xy: 1368, 183
+  size: 84, 57
+  orig: 84, 57
+  offset: 0, 0
+  index: -1
+images/multi_hit_1
+  rotate: false
+  xy: 458, 206
+  size: 278, 304
+  orig: 278, 304
+  offset: 0, 0
+  index: -1
+images/multi_hit_2
+  rotate: true
+  xy: 740, 135
+  size: 71, 216
+  orig: 71, 216
+  offset: 0, 0
+  index: -1
+images/shadow
+  rotate: false
+  xy: 458, 108
+  size: 280, 96
+  orig: 280, 96
+  offset: 0, 0
+  index: -1
+images/tail_L
+  rotate: true
+  xy: 1454, 183
+  size: 123, 161
+  orig: 123, 161
+  offset: 0, 0
+  index: -1
+images/tail_R
+  rotate: true
+  xy: 1266, 242
+  size: 90, 125
+  orig: 90, 125
+  offset: 0, 0
+  index: -1
+images/ufo_body
+  rotate: true
+  xy: 2, 44
+  size: 466, 454
+  orig: 466, 454
+  offset: 0, 0
+  index: -1
+images/ufo_end_1
+  rotate: false
+  xy: 1421, 308
+  size: 362, 202
+  orig: 362, 202
+  offset: 0, 0
+  index: -1
+images/ufo_end_2
+  rotate: false
+  xy: 458, 51
+  size: 226, 55
+  orig: 226, 55
+  offset: 0, 0
+  index: -1
+images/ufo_foot
+  rotate: true
+  xy: 738, 208
+  size: 37, 64
+  orig: 37, 64
+  offset: 0, 0
+  index: -1
+images/ufo_light_1
+  rotate: false
+  xy: 1075, 22
+  size: 36, 36
+  orig: 36, 36
+  offset: 0, 0
+  index: -1
+images/ufo_light_2
+  rotate: true
+  xy: 459, 3
+  size: 46, 80
+  orig: 46, 80
+  offset: 0, 0
+  index: -1
+images/ufo_tool_a_1
+  rotate: true
+  xy: 790, 113
+  size: 20, 55
+  orig: 20, 55
+  offset: 0, 0
+  index: -1
+images/ufo_tool_a_2
+  rotate: false
+  xy: 339, 10
+  size: 118, 32
+  orig: 118, 32
+  offset: 0, 0
+  index: -1
+images/ufo_tool_b_1
+  rotate: true
+  xy: 928, 218
+  size: 27, 52
+  orig: 27, 52
+  offset: 0, 0
+  index: -1
+images/ufo_tool_b_2
+  rotate: false
+  xy: 653, 8
+  size: 65, 41
+  orig: 65, 41
+  offset: 0, 0
+  index: -1
+images/ufo_top
+  rotate: false
+  xy: 738, 328
+  size: 460, 182
+  orig: 460, 182
+  offset: 0, 0
+  index: -1
+images/ufo_top_ring_L1
+  rotate: false
+  xy: 905, 2
+  size: 47, 51
+  orig: 47, 51
+  offset: 0, 0
+  index: -1
+images/ufo_top_ring_L2
+  rotate: false
+  xy: 1212, 159
+  size: 69, 72
+  orig: 69, 72
+  offset: 0, 0
+  index: -1
+images/ufo_top_ring_R1
+  rotate: false
+  xy: 1041, 14
+  size: 32, 44
+  orig: 32, 44
+  offset: 0, 0
+  index: -1
+images/ufo_top_ring_R2
+  rotate: true
+  xy: 720, 3
+  size: 48, 63
+  orig: 48, 63
+  offset: 0, 0
+  index: -1
+images/wingman_1
+  rotate: true
+  xy: 740, 109
+  size: 24, 48
+  orig: 24, 48
+  offset: 0, 0
+  index: -1
+images/wingman_2
+  rotate: true
+  xy: 804, 211
+  size: 34, 65
+  orig: 34, 65
+  offset: 0, 0
+  index: -1
+images/wingman_3
+  rotate: true
+  xy: 1617, 184
+  size: 122, 125
+  orig: 122, 125
+  offset: 0, 0
+  index: -1
+images/wingman_4
+  rotate: false
+  xy: 1043, 220
+  size: 22, 27
+  orig: 22, 27
+  offset: 0, 0
+  index: -1

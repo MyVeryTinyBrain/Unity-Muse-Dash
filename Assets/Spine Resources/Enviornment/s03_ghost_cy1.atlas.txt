@@ -1,0 +1,13 @@
+
+s03_ghost_cy1.png
+size: 153,236
+format: RGBA8888
+filter: Linear,Linear
+repeat: none
+cat_ghost_big
+  rotate: false
+  xy: 2, 2
+  size: 149, 232
+  orig: 149, 232
+  offset: 0, 0
+  index: -1

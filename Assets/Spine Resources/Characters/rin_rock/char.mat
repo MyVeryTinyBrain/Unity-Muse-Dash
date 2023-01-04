@@ -1,0 +1,79 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: char
+  m_Shader: {fileID: 4800000, guid: 657bb7229399bb4408b3bf421c69cba3, type: 3}
+  m_ValidKeywords:
+  - _STRAIGHT_ALPHA_INPUT
+  m_InvalidKeywords:
+  - _ALPHAPREMULTIPLY_ON
+  - _OLD_HARD_RAMP
+  - _USE8NEIGHBOURHOOD_ON
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    AlphaDepth: true
+    IGNOREPROJECTOR: true
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BlendTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 2800000, guid: 03bd8b553dc98dd43b4a3dfbefe1c991, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NoiseTexture:
+        m_Texture: {fileID: 2800000, guid: 43427ede37d7616449554430df75327e, type: 3}
+        m_Scale: {x: 0.4, y: 0.4}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - PixelSnap: 0
+    - _BlendAmount: 0
+    - _Brightness: 1
+    - _Cull: 0
+    - _CustomRenderQueue: 0
+    - _Cutoff: 0.1
+    - _DarkColorAlphaAdditive: 0
+    - _DissolveAlphaRange: 0.4
+    - _DissolveAmount: 0
+    - _DoubleSidedLighting: 0
+    - _DstBlend: 10
+    - _FillPhase: 0
+    - _Hue: 0
+    - _OutlineMipLevel: 0
+    - _OutlineReferenceTexWidth: 1024
+    - _OutlineSmoothness: 1
+    - _OutlineWidth: 3
+    - _RenderQueue: 0
+    - _Saturation: 1
+    - _ShadowAlphaCutoff: 0.1
+    - _SrcBlend: 1
+    - _StencilComp: 8
+    - _StencilRef: 1
+    - _StraightAlphaInput: 1
+    - _ThresholdEnd: 0.25
+    - _ToneAmount: 1
+    - _ToneBrightness: 0.6
+    - _Use8Neighbourhood: 1
+    - _ZWrite: 0
+    m_Colors:
+    - _Black: {r: 0, g: 0, b: 0, a: 0}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _FillColor: {r: 1, g: 1, b: 1, a: 1}
+    - _OutlineColor: {r: 1, g: 1, b: 0, a: 1}
+    - _OverlayColor: {r: 0, g: 0, b: 0, a: 0}
+    - _Tone: {r: 0.6933962, g: 0.81099766, b: 1, a: 1}
+  m_BuildTextureStacks: []
