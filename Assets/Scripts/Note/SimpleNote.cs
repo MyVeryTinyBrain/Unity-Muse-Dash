@@ -86,7 +86,8 @@ public abstract class SimpleNote : Note
     {
         if (!mediator.gameSettings.isEditor)
         {
-            if (mediator.character.characterPosition != data.position)
+            if (mediator.character.characterPosition != NotePosition.Center &&
+                mediator.character.characterPosition != data.position)
             {
                 return;
             }
