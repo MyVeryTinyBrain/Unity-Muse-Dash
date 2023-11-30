@@ -11,13 +11,11 @@ public sealed class Ref<T>
 {
     private Func<T> getter;
     private Action<T> setter;
-
     public Ref(Func<T> getter, Action<T> setter)
     {
         this.getter = getter;
         this.setter = setter;
     }
-
     public T Value
     {
         get { return getter(); }
@@ -27,8 +25,11 @@ public sealed class Ref<T>
 
 public enum FieldAccessType
 {
+    // 언제나 노출
     Always,
+    // 절대 노출하지 않음
     Never,
+    // 조건에 따라 노출
     Condition,
 }
 
@@ -57,21 +58,18 @@ public class DepthFieldInfo
             s.Push(currentDepth);
             currentDepth = currentDepth.parent;
         }
-
         object currentObject = rootData;
         while (s.Count > 0)
         {
             DepthFieldInfo depth = s.Pop();
             currentObject = depth.fieldInfo.GetValue(currentObject);
         }
-
         return currentObject;
     }
 
     public void SetValue<T>(Ref<T> refRootData, object value)
     {
         object originRootData = refRootData.Value;
-
         Stack<DepthFieldInfo> s = new Stack<DepthFieldInfo>();
         DepthFieldInfo currentDepth = this;
         while (currentDepth != null)
@@ -79,7 +77,6 @@ public class DepthFieldInfo
             s.Push(currentDepth);
             currentDepth = currentDepth.parent;
         }
-
         Queue<Temp> q = new Queue<Temp>();
         object currentObject = originRootData;
         while (s.Count > 1)
@@ -92,15 +89,12 @@ public class DepthFieldInfo
 
             q.Enqueue(temp);
         }
-
         this.fieldInfo.SetValue(currentObject, value);
-
         while (q.Count > 0)
         {
             Temp front = q.Dequeue();
             front.childFieldInfo.SetValue(front.parentObject, front.childObject);
         }
-
         refRootData.Value = (T)originRootData;
     }
 
@@ -217,11 +211,9 @@ public class FieldAccessAttribute : PropertyAttribute
                 // 접근 가능 설정인 경우에는 언제나 접근할 수 있습니다.
                 case FieldAccessType.Always:
                 return true;
-
                 // 접근 불가 설정인 경우에는 다른 속성을 탐색합니다.
                 case FieldAccessType.Never:
                 break;
-
                 case FieldAccessType.Condition:
                 {
                     FieldInfo[] matches = Array.FindAll(fieldInfos, (x) =>
@@ -230,13 +222,11 @@ public class FieldAccessAttribute : PropertyAttribute
                         x.FieldType == attribute.type &&
                         x.Name == attribute.name;
                     });
-
                     // 타입과 이름이 같은 필드가 없는 경우에는 다른 속성을 탐색합니다.
                     if (matches.Count() == 0)
                     {
                         break;
                     }
-
                     // 타입과 이름이 같은 필드의 값이 기입된 값과 같은 것이 하나라도 있다면 접근할 수 있습니다.
                     foreach (FieldInfo match in matches)
                     {
@@ -251,7 +241,6 @@ public class FieldAccessAttribute : PropertyAttribute
                 break;
             }
         }
-
         // 조건이 모두 실패하면 해당 필드는 접근 불가능합니다.
         return false;
     }
@@ -307,9 +296,7 @@ public class FieldAccessAttribute : PropertyAttribute
                 }
             }
         }
-
         Search(GetAccessibleFieldInfos(data), null);
-
         while (q.Count > 0)
         {
             DepthFieldInfo front = q.Dequeue();
@@ -317,7 +304,6 @@ public class FieldAccessAttribute : PropertyAttribute
             List<FieldInfo> infos = GetAccessibleFieldInfos(value);
             Search(infos, front);
         }
-
         return depthFieldInfos;
     }
 }

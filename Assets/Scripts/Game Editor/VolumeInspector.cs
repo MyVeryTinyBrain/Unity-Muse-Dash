@@ -105,7 +105,9 @@ public class VolumeInspector : MonoBehaviour, IPointerDownHandler, IPointerUpHan
         if (volume != null)
         {
             int skip = Mathf.Clamp(skipSamples, 1, int.MaxValue);
+            // 화면 왼쪽 경계 x위치가 나타내는 시간
             int leftTimeSample = MusicUtility.TimeToTimeSamples(gameLeftTime, mediator.music.frequency);
+            // 화면 오른쪽 경계 x위치가 나타내는 시간
             int rightTimeSample = MusicUtility.TimeToTimeSamples(gameRightTime, mediator.music.frequency);
             int beginTimeSample = (leftTimeSample / skip) * skip;
             int endTimeSample = (rightTimeSample / skip) * skip;

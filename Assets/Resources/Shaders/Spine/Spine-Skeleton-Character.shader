@@ -75,16 +75,19 @@ Shader "Spine/Skeleton Character" {
 			}
 
 			float4 frag(VertexOutput i) : SV_Target{
+				float4 texColor = tex2D(_MainTex, i.uv);
+
+				// Dissolve
 				float noise = tex2D(_NoiseTexture, i.screenUV * _NoiseTexture_ST.xy + _NoiseTexture_ST.zw).r;
 				float diff = noise - _DissolveAmount;
 				float a = saturate(diff / _DissolveAmount);
-			
-				float4 texColor = tex2D(_MainTex, i.uv);
 				texColor.a *= a;
 
-				//float greyScale = dot(texColor.rgb, float3(0.5, 0.5, 0.5));
+				// Greyscale
 				float greyScale = (texColor.r + texColor.g + texColor.b) / 3;
 				float4 greyScaledColor = float4(greyScale, greyScale, greyScale, texColor.a);
+
+				// Apply tone
 				float4 tonedColor = greyScaledColor * _Tone;
 				texColor = lerp(texColor, tonedColor, _ToneAmount);
 

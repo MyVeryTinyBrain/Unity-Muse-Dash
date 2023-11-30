@@ -299,52 +299,61 @@ public class Boss : MonoBehaviour, IGameReset
 
     private void Update()
     {
+        // 보스 스킨을 맵에 알맞게 설정합니다.
         UpdateMapType();
 
+        // 수동 애니메이션 업데이트로, 보스 애니메이션 노트보다 우선입니다.
+        // 수동 애니메이션이 재생되는 중에는 보스 애니메이션 노트의 영향을 받지 않습니다.
+        // 사용처 예시) 보스가 공격 애니메이션 중 타격을 입는 경우에 사용됩니다.
         bool manualUpdated = ManualAnimationUpdate();
         if (manualUpdated)
         {
             return;
         }
 
+        // 재생해야 하는 보스 애니메이션 데이터를 이진탐색합니다.
         List<BossAnimationData> bossAnimationDatas = mediator.music.bossAnimations;
         int closetIndex = mediator.music.GetBossAnimationIndexAtTime(mediator.music.adjustedTime);
 
+        // 애니메이션 데이터가 있으면 그 애니메이션을 재생합니다.
         if (Mathf.Clamp(closetIndex, 0, bossAnimationDatas.Count - 1) == closetIndex)
         {
             BossAnimationData closetAnimationData = bossAnimationDatas[closetIndex];
             BossAnimationInfo closetAnimationInfo = animationsInfos[closetAnimationData.type];
             float deltaTime = mediator.music.adjustedTime - closetAnimationData.time;
-            float animationTime = deltaTime * closetAnimationData.speed;
-            float closetAnimationEndTime = GetAnimationEndTime(mapType, closetAnimationData);
+            float animationTime = deltaTime * closetAnimationData.speed; // 애니메이션 재생시간
+            float closetAnimationEndTime = GetAnimationEndTime(mapType, closetAnimationData); // 이 애니메이션이 끝나는 시간
 
             if (!mediator.gameSettings.isEditor && closetAnimationData != lastBossAnimationData)
             {
                 lastBossAnimationData = closetAnimationData;
 
-                Spine.Bone effectSpawnBown = null;
+                // 애니메이션이 공격 타입이면, 공격 타입에 따른 이펙트를 설정합니다.
+                Spine.Bone effectSpawnBone = null;
                 Effect fireEffect = null;
                 switch (lastBossAnimationData.type)
                 {
                     case BossAnimationType.Attack1_Air:
                     case BossAnimationType.Attack1_Road:
-                    effectSpawnBown = weapon1NoteEffectSpawnBone;
+                    effectSpawnBone = weapon1NoteEffectSpawnBone;
                     fireEffect = weapon1NoteEffect;
                     break;
 
                     case BossAnimationType.Attack2:
-                    effectSpawnBown = weapon2NoteEffectSpawnBone;
+                    effectSpawnBone = weapon2NoteEffectSpawnBone;
                     fireEffect = weapon2NoteEffect;
                     break;
                 }
 
-                if(effectSpawnBown != null && fireEffect != null)
+                // 생성해야 할 이펙트가 있으면 그 이펙트를 생성합니다.
+                if(effectSpawnBone != null && fireEffect != null)
                 {
                     Effect effect = mediator.effectPool.SpawnEffect(fireEffect);
-                    effect.transform.position = effectSpawnBown.GetWorldPosition(spine.transform);
+                    effect.transform.position = effectSpawnBone.GetWorldPosition(spine.transform);
                 }
             }
 
+            // 플래그가 활성화 상태면 기존 애니메이션 재생시간 대신 레벨 에디터에서 지정한 재생시간을 사용합니다.
             if (closetAnimationData.useUnifiedDuration)
             {
                 // duration * x = unifiedTime
@@ -353,7 +362,10 @@ public class Boss : MonoBehaviour, IGameReset
                 animationTime /= divider;
             }
 
+            // 다음 애니메이션이 존재하는 경우 그 애니메이션을 가져옵니다.
             BossAnimationData nextAnimationData = closetIndex + 1 < bossAnimationDatas.Count ? bossAnimationDatas[closetIndex + 1] : null;
+
+            // 다음 애니메이션으로의 애니메이션 전환효과가 있다면 stateChangeAnimationType에 None이 아닌 값이 저장됩니다.
             BossAnimationType stateChangeAnimationType = BossAnimationType.None;
             float stateChangeMinNormalizedDuration = 0;
             if (nextAnimationData != null)
@@ -361,8 +373,7 @@ public class Boss : MonoBehaviour, IGameReset
                 stateChangeAnimationType = GetStateChangeAnimationType(
                         animationsInfos[closetAnimationData.type].subData.state,
                         animationsInfos[nextAnimationData.type].subData.state,
-                        out stateChangeMinNormalizedDuration
-                        );
+                        out stateChangeMinNormalizedDuration);
 
                 // 같은 애니메이션으로의 자동 전환을 방지합니다.
                 if (stateChangeAnimationType == nextAnimationData.type)
@@ -371,20 +382,27 @@ public class Boss : MonoBehaviour, IGameReset
                 }
             }
 
+            // 애니메이션 전환효과가 필요하다면 다음 애니메이션 전까지 그 애니메이션을 재생하기 위해 변수를 준비합니다.
             BossAnimationInfo stateChangeAnimationInfo = null;
-            float stateChangeAnimationEndTime = float.MaxValue;
-            float stateChangeAnimationStartTime = float.MaxValue;
+            float stateChangeAnimationEndTime = float.MaxValue; // 상태전환 애니메이션 종료시간
+            float stateChangeAnimationStartTime = float.MaxValue; // 상태전환 애니메이션 시작시간
             if (stateChangeAnimationType != BossAnimationType.None)
             {
                 stateChangeAnimationInfo = animationsInfos[stateChangeAnimationType];
+                // 다음 애니메이션이 시작되기 전까지 상태전환 애니메이션을 재생합니다.
                 stateChangeAnimationEndTime = nextAnimationData.time;
+                // 다음 애니메이션의 시작시간에서 상태전환 애니메이션 시간을 뺀 시간부터 재생합니다.
                 stateChangeAnimationStartTime = nextAnimationData.time - stateChangeAnimationInfo.animation.Duration;
 
+                // 현재 재생중인 애니메이션이 루프 애니메이션이 아니면
                 if (!closetAnimationInfo.subData.loop)
                 {
-                    stateChangeAnimationStartTime = Mathf.Clamp(stateChangeAnimationStartTime, closetAnimationEndTime, stateChangeAnimationEndTime);
-
                     float stateChangeMinDuration = stateChangeMinNormalizedDuration * stateChangeAnimationInfo.animation.Duration;
+                    // 상태전환 애니메이션의 시작시간을 범위 내에 고정합니다.
+                    // 현재 애니메이션이 끝나는 시간과 상태전환 애니메이션이 끝나는 시간 사이.
+                    stateChangeAnimationStartTime = Mathf.Clamp(stateChangeAnimationStartTime, closetAnimationEndTime, stateChangeAnimationEndTime);
+                    // 재설정된 상태 애니메이션의 재생시간이 최소 재생시간보다 짧은 경우 최소 재생시간을 보장하도록
+                    // 상태전환 애니메이션의 시작시간을 앞당깁니다.
                     if (stateChangeAnimationEndTime - stateChangeAnimationStartTime < stateChangeMinDuration)
                     {
                         stateChangeAnimationStartTime = stateChangeAnimationEndTime - stateChangeMinDuration;
@@ -398,14 +416,10 @@ public class Boss : MonoBehaviour, IGameReset
 
             if (mediator.music.adjustedTime >= closetAnimationData.time)
             {
-                // 재생해야 할 애니메이션 데이터 시간 이상일 때 동작합니다.
-                // 시간 미만일 때 동작하면 동작 시간 전 까지 스켈레톤이 굳은 모습이 됩니다.
-
                 if (stateChangeAnimationInfo != null && mediator.music.adjustedTime > stateChangeAnimationStartTime)
                 {
                     // 다음 애니메이션에서 상태가 변환된다면
                     // 다음 애니메이션이 시작되기 직전에 상태 변환 애니메이션을 적용합니다.
-
                     float normalizedStateChangeAnimationTime =
                         MathUtility.SmoothStep(stateChangeAnimationStartTime, stateChangeAnimationEndTime, mediator.music.adjustedTime);
                     float stateChangeAnimationTime = normalizedStateChangeAnimationTime * stateChangeAnimationInfo.animation.Duration;
@@ -416,14 +430,12 @@ public class Boss : MonoBehaviour, IGameReset
                 else if (animationTime <= closetAnimationInfo.animation.Duration)
                 {
                     // 해당 애니메이션이 완료되지 않을 재생시간이고, 플래그가 꺼져 있을 때 해당 애니메이션을 적용합니다.
-
                     spine.ClearState();
                     spine.ApplyAnimation(closetAnimationInfo.animation, animationTime, closetAnimationInfo.subData.loop);
                 }
                 else
                 {
                     // 애니메이션의 끝 이후 상태 애니메이션을 적용합니다.
-
                     BossAnimationType stateAnimationType = GetStateAnimationType(closetAnimationInfo.subData.state);
                     BossAnimationInfo stateAnimationInfo = animationsInfos[stateAnimationType];
 

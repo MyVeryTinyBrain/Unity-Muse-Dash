@@ -119,6 +119,7 @@ public class MusicSource : MonoBehaviour
     private void Awake()
     {
         audioSource = gameObject.AddComponent<AudioSource>();
+        audioSource.volume = 0.2f;
     }
 
     private void Update()

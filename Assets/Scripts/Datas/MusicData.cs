@@ -147,8 +147,8 @@ public enum NoteVisualizeMethod
 public enum NoteVisibleState
 {
     In,
-    OutOfLeft,
-    OutOfRight,
+    OutsideLeft,
+    OutsideRight,
 }
 
 public enum HDirection : int
@@ -443,6 +443,12 @@ public struct NoteData
     [FieldAccess(false)]
     public NotePosition         position;
 
+    [ReadOnlyInRuntime]
+    public NoteType type;
+
+    [ReadOnlyInRuntime]
+    public ulong hash;
+
     [FieldAccess(typeof(NoteType), nameof(type), NoteType.Regular)]
     public RegularNoteData      regularNoteData;
 
@@ -473,12 +479,6 @@ public struct NoteData
     [FieldAccess(typeof(NoteType), nameof(type), NoteType.BossAnimation)]
     public BossAnimationData    bossAnimationData;
 
-    [ReadOnlyInRuntime]
-    public NoteType             type;
-
-    [ReadOnlyInRuntime]
-    public ulong hash;
-
     public NoteData Copy()
     {
         NoteData data = new NoteData();
@@ -486,6 +486,8 @@ public struct NoteData
         data.time = this.time;
         data.speed = this.speed;
         data.position = this.position;
+        data.type = this.type;
+        data.hash = this.hash;
         data.regularNoteData = this.regularNoteData;
         data.longNoteData = this.longNoteData;
         data.jumpNoteData = this.jumpNoteData;
@@ -496,8 +498,6 @@ public struct NoteData
         data.sandBagNoteData = this.sandBagNoteData;
         data.bossRushNoteData = this.bossRushNoteData;
         data.bossAnimationData = this.bossAnimationData.Copy();
-        data.type = this.type;
-        data.hash = this.hash;
 
         return data;
     }
@@ -582,20 +582,21 @@ public struct NoteData
 [System.Serializable]
 public class BossAnimationData
 {
+    // 애니메이션이 시작해야 하는 음악 재생시간
     public float                time;
-
+    // 애니메이션 재생 속도
     [FieldAccess(true)]
     public float                speed;
-
+    // 애니메이션 종류
     [FieldAccess(true)]
     public BossAnimationType    type;
-
+    // 사용자 지정 애니메이션 시간 사용 플래그
     [FieldAccess(true)]
     public bool                 useUnifiedDuration;
-
+    // 사용자 지정 애니메이션 시간
     [FieldAccess(true)]
     public float                unifiedDuration;
-
+    // 노트가 판정선에 닿는 시간
     public float                noteTime;
 
     public BossAnimationData Copy()
@@ -631,13 +632,10 @@ public struct BPMData
 {
     [FieldAccess(true)]
     public float            time;
-
     [FieldAccess(true)]
     public float            bpm;
-
     [FieldAccess(true)]
     public TransitionType   transition;
-
     [FieldAccess(true)]
     public float            offset;
 

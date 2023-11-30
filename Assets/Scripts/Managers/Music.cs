@@ -261,9 +261,6 @@ public class Music : MonoBehaviour
     {
         if (musicSource == null) musicSource = GetComponent<MusicSource>();
 
-        // 시간 기준으로 오름차순 정렬합니다.
-        bpmDatas.Sort((BPMData lhs, BPMData rhs) => lhs.time.CompareTo(rhs.time));
-
         if (beatDatas4 == null) beatDatas4 = new List<float>();
         if (beatDatas8 == null) beatDatas8 = new List<float>();
         if (beatDatas16 == null) beatDatas16 = new List<float>();
@@ -274,11 +271,12 @@ public class Music : MonoBehaviour
         beatDatas16.Clear();
         beatDatas32.Clear();
 
+        // 시간 기준으로 오름차순 정렬합니다.
+        bpmDatas.Sort((BPMData lhs, BPMData rhs) => lhs.time.CompareTo(rhs.time));
         for (int i = 0; i < bpmDatas.Count; ++i)
         {
             int current = i;
             int next = Mathf.Clamp(i + 1, 0, bpmDatas.Count - 1);
-
             if (current == next ||
                 bpmDatas[next].transition == TransitionType.Constant ||
                 bpmDatas[current].bpm == bpmDatas[next].bpm)
@@ -301,7 +299,6 @@ public class Music : MonoBehaviour
         {
             float begin = bpmDatas[i].time;
             float end = (i < bpmDatas.Count - 1) ? bpmDatas[i + 1].time : musicSource.clip.length;
-
             float delta = (60f / bpmDatas[i].bpm) / (float)beatType;
             for (float beatTime = begin; beatTime < end; beatTime += delta)
             {
@@ -315,14 +312,12 @@ public class Music : MonoBehaviour
             float end = bpmDatas[next].time;
             float startBPM = bpmDatas[current].bpm;
             float endBPM = bpmDatas[next].bpm;
-
             while (start < end)
             {
                 float beatDealy = CalculateNextBeatDelay(start, end, startBPM, endBPM, beatType);
                 float beatTime = beatDealy + start;
                 start = beatTime;
                 startBPM = GetBPMAtTime(start);
-
                 if (beatTime < end)
                 {
                     beatDatas.Add(beatTime + bpmDatas[current].offset);
@@ -341,7 +336,7 @@ public class Music : MonoBehaviour
             float b = F * Sb;
             float c = -60;
             float x1 = (-b + Mathf.Sqrt(b * b - 4 * a * c)) / (2 * a);
-            float x2 = (-b - Mathf.Sqrt(b * b - 4 * a * c)) / (2 * a);
+            //float x2 = (-b - Mathf.Sqrt(b * b - 4 * a * c)) / (2 * a);
             return x1;
         }
     }
@@ -361,11 +356,9 @@ public class Music : MonoBehaviour
     public int GetClosetBeatIndexAtTime(float playingTime, BeatType type)
     {
         List<float> beats = GetBeats(type);
-
         int bsBegin = 0;
         int bsEnd = beats.Count - 1;
         int closetIndex = 0;
-
         // Binary search
         while (bsBegin <= bsEnd)
         {
@@ -380,7 +373,6 @@ public class Music : MonoBehaviour
                 bsEnd = mid - 1;
             }
         }
-
         return closetIndex;
     }
 
@@ -390,9 +382,7 @@ public class Music : MonoBehaviour
         {
             return 1.0f * speedScaleMultiplier;
         }
-
         // Binary search
-
         int begin = 0;
         int end = speedScaleDatas.Count - 1;
         int closetIndex = 0;
@@ -409,7 +399,6 @@ public class Music : MonoBehaviour
                 end = mid - 1;
             }
         }
-
         int nextIndex = Mathf.Clamp(closetIndex + 1, 0, speedScaleDatas.Count - 1);
         if (speedScaleDatas[nextIndex].transition == TransitionType.Constant || 
             speedScaleDatas[closetIndex].speedScale == speedScaleDatas[nextIndex].speedScale)
@@ -439,6 +428,8 @@ public class Music : MonoBehaviour
 
     public float TimeToRatioAtAdjustedTime(float time, float speed)
     {
+        // speedScaleAtAdjustedTime: 오프셋이 적용된 게임 전체 배속
+        // adjustedTime: 오프셋이 적용된 현재 음악 재생 시간
         return MusicUtility.TimeToRatio(time, speed * speedScaleAtAdjustedTime, adjustedTime);
     }
 

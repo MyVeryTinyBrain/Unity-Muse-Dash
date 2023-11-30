@@ -108,7 +108,6 @@ public class RegularNote : Note
     protected override void UpdateLocalPosition()
     {
         base.UpdateLocalPosition();
-
         float y = GetHitLocalY();
         transform.localPosition = new Vector2(ratio * mediator.gameSettings.lengthPerSeconds, y);
     }
@@ -116,18 +115,15 @@ public class RegularNote : Note
     protected override void UpdateAnimation()
     {
         base.UpdateAnimation();
-
         switch (data.regularNoteData.noteInType)
         {
             case RegularNoteInType.Default:
             {
                 float animationTime = mediator.music.adjustedTime - data.time;
-
                 ClearState();
                 SetDefaultAnimationByTime(animationTime);
             }
             break;
-
             case RegularNoteInType.FromUp:
             case RegularNoteInType.FromDown:
             {

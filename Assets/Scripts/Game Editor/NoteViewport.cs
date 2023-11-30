@@ -75,50 +75,41 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
     {
         closetBeatIndex = -1;
         closetBeatPosition = 0;
-
-        Vector2 localMouse = rectTransform.InverseTransformPoint(worldPosition);
-
-        // 마우스의 x위치와 가까운 비트 인덱스입니다.
-        int closetIndex = -1;
+        Vector2 localPosition = rectTransform.InverseTransformPoint(worldPosition);
+        int closetIndex = -1; // x위치와 가까운 비트 인덱스
         float closetDistance = float.MaxValue;
         for (int i = 0; i < visibleBeats.Count; ++i)
         {
-            float distance = Mathf.Abs(localMouse.x - visibleBeats[i].localCenterX);
+            float distance = Mathf.Abs(localPosition.x - visibleBeats[i].localCenterX);
             if (distance < closetDistance)
             {
                 closetDistance = distance;
                 closetIndex = i;
             }
         }
-
         if (closetIndex != -1)
         {
             VisibleBeat closetBeat = visibleBeats[closetIndex];
-
             float upY = (closetBeat.localUpYTop + closetBeat.localUpYBot) * 0.5f;
             float centerY = (closetBeat.localUpYBot + closetBeat.localDownYTop) * 0.5f;
             float downY = (closetBeat.localDownYTop + closetBeat.localDownYBot) * 0.5f;
-
             float[] yPos = { upY, centerY, downY };
             NotePosition[] notePos = { NotePosition.Air, NotePosition.Center, NotePosition.Road };
             float minYDistance = float.MaxValue;
             NotePosition minYDistancePos = NotePosition.Air;
-
             for(int i = 0; i < 3; ++i)
             {
-                float yDistance = Mathf.Abs(localMouse.y - yPos[i]);
+                float yDistance = Mathf.Abs(localPosition.y - yPos[i]);
                 if(yDistance < minYDistance)
                 {
                     minYDistance = yDistance;
                     minYDistancePos = notePos[i];
                 }
             }
-
             closetBeatIndex = visibleBeats[closetIndex].index;
             closetBeatPosition = minYDistancePos;
             return true;
         }
-
         return false;
     }
 
@@ -132,46 +123,36 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
     {
         overlapedBeatIndex = -1;
         overlapedPosition = 0;
-
-        float localUpHitPointY = rectTransform.InverseTransformPoint(0, mediator.hitPoint.airPos.y, 0).y;
-        float localDownHitPointY = rectTransform.InverseTransformPoint(0, mediator.hitPoint.roadPos.y, 0).y;
-        float localGridWidth = rectTransform.InverseTransformVector(this.localGridWidth, 0, 0).x;
-        float localGridHeight = rectTransform.InverseTransformVector(0, this.localGridHeight, 0).y;
-
-        Vector2 localMouse = rectTransform.InverseTransformPoint(worldPosition);
-
-        // 마우스의 x위치와 가까운 비트 인덱스입니다.
-        int closetIndex = -1;
+        Vector2 localPosition = rectTransform.InverseTransformPoint(worldPosition);
+        int closetIndex = -1; // x위치와 가까운 비트 인덱스
         float closetDistance = float.MaxValue;
         for (int i = 0; i < visibleBeats.Count; ++i)
         {
-            float distance = Mathf.Abs(localMouse.x - visibleBeats[i].localCenterX);
+            float distance = Mathf.Abs(localPosition.x - visibleBeats[i].localCenterX);
             if (distance < closetDistance)
             {
                 closetDistance = distance;
                 closetIndex = i;
             }
         }
-
         if (closetIndex != -1)
         {
             VisibleBeat closetBeat = visibleBeats[closetIndex];
-
-            if (localMouse.x > closetBeat.localLeftX && localMouse.x < closetBeat.localRightX)
+            if (localPosition.x > closetBeat.localLeftX && localPosition.x < closetBeat.localRightX)
             {
-                if (localMouse.y > closetBeat.localUpYBot && localMouse.y < closetBeat.localUpYTop)
+                if (localPosition.y > closetBeat.localUpYBot && localPosition.y < closetBeat.localUpYTop)
                 {
                     overlapedBeatIndex = visibleBeats[closetIndex].index;
                     overlapedPosition = NotePosition.Air;
                     return true;
                 }
-                else if (localMouse.y > closetBeat.localDownYTop && localMouse.y < closetBeat.localUpYBot)
+                else if (localPosition.y > closetBeat.localDownYTop && localPosition.y < closetBeat.localUpYBot)
                 {
                     overlapedBeatIndex = visibleBeats[closetIndex].index;
                     overlapedPosition = NotePosition.Center;
                     return true;
                 }
-                else if (localMouse.y > closetBeat.localDownYBot && localMouse.y < closetBeat.localDownYTop)
+                else if (localPosition.y > closetBeat.localDownYBot && localPosition.y < closetBeat.localDownYTop)
                 {
                     overlapedBeatIndex = visibleBeats[closetIndex].index;
                     overlapedPosition = NotePosition.Road;
@@ -179,7 +160,6 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
                 }
             }
         }
-
         return false;
     }
 
@@ -190,10 +170,7 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
         float localDownHitPointTop = rectTransform.InverseTransformPoint(0, mediator.hitPoint.roadPos.y + localGridHeight, 0).y;
         float localDownHitPointBot = rectTransform.InverseTransformPoint(0, mediator.hitPoint.roadPos.y - localGridHeight, 0).y;
         float localGridWidth = rectTransform.InverseTransformVector(this.localGridWidth, 0, 0).x;
-
         float panelWidth = rectTransform.rect.width;
-        float panelHalfWidth = panelWidth * 0.5f;
-
         List<float> beats = mediator.music.GetBeats(beatType);
 
         // 이진 탐색할 시간을 구합니다.
@@ -204,7 +181,6 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
         float worldLeftX = rectTransform.TransformPoint(rectTransform.rect.xMin, 0, 0).x;
         float worldDistX = Mathf.Abs(worldLeftX - mediator.hitPoint.Pos.x);
         float deltaRatio = worldDistX / mediator.gameSettings.lengthPerSeconds;
-        //float deltaTime = MusicUtility.RatioToTime(deltaRatio, 1, 0);
         float deltaTime = MusicUtility.RatioToTime(deltaRatio, mediator.music.currentGlobalSpeedScale, 0);
         float searchBeginTime = mediator.music.playingTime - deltaTime;  
         int closetIndex = mediator.music.GetClosetBeatIndexAtTime(searchBeginTime, beatType);
@@ -217,7 +193,6 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
             float ratio = mediator.music.TimeToRatioAtCurrentTime(beats[i], 1.0f);
             float worldX = mediator.hitPoint.Pos.x + (float)ratio * mediator.gameSettings.lengthPerSeconds;
             float localX = rectTransform.InverseTransformPoint(worldX, 0, 0).x;
-
             VisibleBeat visibleBeat = new VisibleBeat();
             visibleBeat.index = i;
             visibleBeat.localCenterX = localX;
@@ -227,12 +202,10 @@ public class NoteViewport : MonoBehaviour, IPointerClickHandler, IPointerExitHan
             visibleBeat.localUpYBot = localUpHitPointBot;
             visibleBeat.localDownYTop = localDownHitPointTop;
             visibleBeat.localDownYBot = localDownHitPointBot;
-
             if (visibleBeat.localLeftX > rectTransform.rect.xMax && visibleBeat.localRightX > rectTransform.rect.xMax)
             {
                 break;
             }
-
             visibleBeats.Add(visibleBeat);
         }
     }

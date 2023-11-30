@@ -196,7 +196,7 @@ public class SpriteBoundsEditor : Editor
 
         GUILayout.Space(10);
 
-        if (GUILayout.Button("Copy on up"))
+        if (GUILayout.Button("Copy to up"))
         {
             SpriteBounds spriteBounds = targetSpriteBounds.CopyOnUp();
             Selection.activeGameObject = spriteBounds.gameObject;
@@ -204,13 +204,13 @@ public class SpriteBoundsEditor : Editor
         }
 
         GUILayout.BeginHorizontal();
-        if (GUILayout.Button("Copy on left"))
+        if (GUILayout.Button("Copy to left"))
         {
             SpriteBounds spriteBounds = targetSpriteBounds.CopyOnLeft();
             Selection.activeGameObject = spriteBounds.gameObject;
             Undo.RegisterCreatedObjectUndo(spriteBounds.gameObject, "Copy SpriteBounds");
         }
-        if (GUILayout.Button("Copy on right"))
+        if (GUILayout.Button("Copy to right"))
         {
             SpriteBounds spriteBounds = targetSpriteBounds.CopyOnRight();
             Selection.activeGameObject = spriteBounds.gameObject;
@@ -218,7 +218,7 @@ public class SpriteBoundsEditor : Editor
         }
         GUILayout.EndHorizontal();
 
-        if (GUILayout.Button("Copy on down"))
+        if (GUILayout.Button("Copy to down"))
         {
             SpriteBounds spriteBounds = targetSpriteBounds.CopyOnDown();
             Selection.activeGameObject = spriteBounds.gameObject;

@@ -201,15 +201,15 @@ public abstract class Note : MonoBehaviour, INote
     {
         float noteLocalX = noteRatio * mediator.gameSettings.lengthPerSeconds;
         if (noteLocalX < mediator.gameSettings.localLeftVisibleX)
-        {
-            return NoteVisibleState.OutOfLeft;
+        {   // 노트가 왼쪽 게임 경계의 밖에 존재함
+            return NoteVisibleState.OutsideLeft;
         }
         else if (noteLocalX > mediator.gameSettings.localRightVisibleX)
-        {
-            return NoteVisibleState.OutOfRight;
+        {   // 노트가 오른쪽 게임 경계의 밖에 존재함
+            return NoteVisibleState.OutsideRight;
         }
         else
-        {
+        {   // 노트가 게임 경계 내부에 포함됨
             return NoteVisibleState.In;
         }
     }
@@ -365,23 +365,20 @@ public abstract class Note : MonoBehaviour, INote
     {
         if (isDead)
         {
-            return NoteVisibleState.OutOfRight;
+            return NoteVisibleState.OutsideRight;
         }
-
-        UpdateRatio();
-
+        UpdateRatio(); // 노트와 판정선 사이의 거리의 비율을 계산
+        // 노트가 화면 안에 있는지 검사
         NoteVisibleState visibleState = GetNoteVisibleStateAtCurrentTime();
-
         switch (visibleState)
         {
-            case NoteVisibleState.In:
+            case NoteVisibleState.In: // 노트가 화면 안에 있는 경우
             {
-                SetNoteActive(true);
-                UpdateMapType();
-                UpdateLocalPosition();
-                UpdateAnimation();
-                NoteUpdate();
-                
+                SetNoteActive(true); // 노트 활성화
+                UpdateMapType(); // 맵 종류에 따른 스킨 적용
+                UpdateLocalPosition(); // 노트의 위치 설정
+                UpdateAnimation(); // 노트의 스파인 애니메이션 적용
+                NoteUpdate(); // 노트별 추가 작업
                 if (!mediator.gameSettings.isEditor)
                 {
                     TakeDamage();
@@ -389,20 +386,17 @@ public abstract class Note : MonoBehaviour, INote
                 }
             }
             break;
-
-            case NoteVisibleState.OutOfLeft:
-            case NoteVisibleState.OutOfRight:
+            case NoteVisibleState.OutsideLeft: // 노트가 화면 밖에 있는 경우
+            case NoteVisibleState.OutsideRight:
             {
                 SetNoteActive(false);
             }
             break;
         }
-
         if (mediator.gameSettings.isEditor)
         {
             UpdateBossAnimationData();
         }
-
         return visibleState;
     }
 
@@ -413,6 +407,8 @@ public abstract class Note : MonoBehaviour, INote
 
     public void UpdateRatio()
     {
+        // data.time: 노트가 판정선에 닿는 시간
+        // data.speed: 노트 각각의 배속
         noteRatio = mediator.music.TimeToRatioAtAdjustedTime(data.time, data.speed);
     }
 

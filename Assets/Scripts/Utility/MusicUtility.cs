@@ -16,6 +16,14 @@ abstract class MusicUtility
         return (int)(time * frequency);
     }
 
+    /// <summary>
+    /// 현재 음악이 재생중인 시간과 다른 시간이 주어졌을때
+    /// 현재 음악이 재생중인 시간을 기준으로 다른 시간을 판정선과의 거리 비율로 변환합니다.
+    /// </summary>
+    /// <param name="time">다른 시간</param>
+    /// <param name="fieldLength">필드의 길이</param>
+    /// <param name="playingTime">현재 재생중인 시간</param>
+    /// <returns></returns>
     public static float TimeToRatio(float time, float fieldLength, float playingTime)
     {
         // Ratio = (Time - PlayingTime) * FieldLength

@@ -5,10 +5,9 @@ using System;
 
 public class EffectPool : MonoBehaviour, IGameReset
 {
-    List<Effect> effects = new List<Effect>();
-
     // 게임오브젝트 이름으로 분류된 사용 가능한 이펙트 스택입니다.
     Dictionary<string, Stack<Effect>> usableEffects = new Dictionary<string, Stack<Effect>>();
+    List<Effect> effects = new List<Effect>();
 
     private Effect AddEffect(Effect prefab)
     {
@@ -17,7 +16,6 @@ public class EffectPool : MonoBehaviour, IGameReset
         // 복제한 게임오브젝트의 이름은 반드시 프리팹의 이름과 같아야 합니다.
         effect.gameObject.name = prefab.gameObject.name;
         effect.transform.SetParent(this.transform);
-
         effect.OnComplete += OnComplete;
         effects.Add(effect);
         return effect;
@@ -56,11 +54,6 @@ public class EffectPool : MonoBehaviour, IGameReset
 
     public Effect SpawnEffect(Effect prefab)
     {
-        return SpawnEffect_Internal(prefab);
-    }
-
-    public Effect SpawnEffect_Internal(Effect prefab)
-    {
         Effect effect = null;
         if (GetUsableEffectCount(prefab) == 0)
         {
@@ -71,9 +64,7 @@ public class EffectPool : MonoBehaviour, IGameReset
             effect = PopEffect(prefab);
             effect.gameObject.SetActive(true);
         }
-
-        effect.PlayStartEffect();
-
+        effect.PlayEffect();
         return effect;
     }
 

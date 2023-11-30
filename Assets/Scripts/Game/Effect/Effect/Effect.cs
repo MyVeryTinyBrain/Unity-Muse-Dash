@@ -73,7 +73,7 @@ public class Effect : MonoBehaviour
         currentParticles.Clear();
     }
 
-    public void PlayStartEffect()
+    public void PlayEffect()
     {
         playing = true;
 
@@ -148,7 +148,7 @@ public class Effect : MonoBehaviour
         ClearState();
         if (playOnAwake)
         {
-            PlayStartEffect();
+            PlayEffect();
         }
 
         sortingGroup = GetComponent<SortingGroup>();
@@ -184,7 +184,7 @@ public class EffectEditor : Editor
         if (GUILayout.Button("Start"))
         {
             targetEffect.gameObject.SetActive(true);
-            targetEffect.PlayStartEffect();
+            targetEffect.PlayEffect();
         }
         if (GUILayout.Button("Stop"))
         {

@@ -18,9 +18,11 @@ MonoBehaviour:
   skeletonJSON: {fileID: 4900000, guid: 8de3f8c6010cccc46b051ae6d9df66d3, type: 3}
   isUpgradingBlendModeMaterials: 0
   blendModeMaterials:
-    requiresBlendModeMaterials: 0
+    requiresBlendModeMaterials: 1
     applyAdditiveMaterial: 1
-    additiveMaterials: []
+    additiveMaterials:
+    - pageName: s03_atlas.png
+      material: {fileID: 2100000, guid: 7b5eccd2fac1f104d9e5a4b1cc06c30c, type: 2}
     multiplyMaterials: []
     screenMaterials: []
   skeletonDataModifiers: []

@@ -90,11 +90,11 @@ public class LongNote : Note, ITailedNote
 
         if (tailLocalX < mediator.gameSettings.localLeftVisibleX)
         {
-            return NoteVisibleState.OutOfLeft;
+            return NoteVisibleState.OutsideLeft;
         }
         else if (headLocalX > mediator.gameSettings.localRightVisibleX)
         {
-            return NoteVisibleState.OutOfRight;
+            return NoteVisibleState.OutsideRight;
         }
         else
         {
