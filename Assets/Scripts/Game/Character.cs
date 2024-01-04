@@ -410,6 +410,7 @@ public class Character : MonoBehaviour, IGameReset
 
     void Attack(NotePosition attackPosition)
     {
+        #region INITIALIZE ATTACK VARIABLES
         if (isDead)
         {
             return;
@@ -419,13 +420,14 @@ public class Character : MonoBehaviour, IGameReset
         float delay = fastChangeDelay;
         NotePosition newHitPosition = attackPosition;
         Action<CharacterSpine> setAnimation = null;
+        #endregion
 
         List<Note> visibleNotes = mediator.music.visibleNotes;
         bool used = false;
         foreach (Note note in visibleNotes)
         {
             NoteResult interactResult = note.Interact(attackPosition);
-
+            #region PROCESS INTERACTION
             if (interactResult.startInteract)
             {
                 note.OnEndInteractCallback += OnEndInteract;
@@ -522,8 +524,9 @@ public class Character : MonoBehaviour, IGameReset
             {
                 return;
             }
-
+            #endregion
             NoteResult hitResult = note.Hit(attackPosition);
+            #region PROCESS HIT
             if (hitResult.hit)
             {
                 used = true;
@@ -534,10 +537,6 @@ public class Character : MonoBehaviour, IGameReset
 
                 CharacterHitType hitType = CharacterHitType.None;
                 bool diffPosition = attackPosition != position;
-                //bool hitSameTimeNote =
-                //    lastHitNote != null &&
-                //    Mathf.Abs(note.data.time - lastHitNote.data.time) < centerAttackDelay &&
-                //    lastHitNote.interactWeight <= 0;
                 bool hitDoubleNote = !alterEgo && IsDoubleHitNote(note);
                 bool hitSingleTapNote = note.GetType() == typeof(SandBagNote) || note.GetType() == typeof(BossRushNote);
                 if (hitDoubleNote || hitSingleTapNote)
@@ -606,6 +605,7 @@ public class Character : MonoBehaviour, IGameReset
             {
                 return;
             }
+            #endregion
         }
 
         if (!used)

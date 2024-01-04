@@ -220,12 +220,10 @@ public abstract class Note : MonoBehaviour, INote
         {
             return NoteResult.None();
         }
-
         if (notePosition != data.position)
         {
             return NoteResult.None();
         }
-
         float diff = Mathf.Abs(mediator.music.adjustedTime - data.time);
         if (diff > mediator.gameSettings.greatDiffTime)
         {
@@ -233,11 +231,10 @@ public abstract class Note : MonoBehaviour, INote
         }
 
         NoteResult result = NoteResult.Hit(notePosition);
-        result.precision = (diff <= mediator.gameSettings.perfectDiffTime) ? ComboPrecision.Perfect : ComboPrecision.Great;
-
+        result.precision = diff <= mediator.gameSettings.perfectDiffTime ? 
+            ComboPrecision.Perfect : ComboPrecision.Great;
         SpawnDyingEffect(notePosition, result.precision);
         isDead = true;
-
         return result;
     }
     protected virtual void OnReleaseHit(NotePosition notePosition) { }

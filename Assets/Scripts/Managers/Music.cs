@@ -848,9 +848,7 @@ public class Music : MonoBehaviour
     public bool LoadClip(string path)
     {
         if (!File.Exists(path))
-        {
             return false;
-        }
 
         AudioType audioType = AudioType.UNKNOWN;
         string extension = Path.GetExtension(path).ToLower();
@@ -875,16 +873,13 @@ public class Music : MonoBehaviour
 
         // 파일 경로를 파일을 저장하는 폴더 내부로 변경합니다.
         string newPath = $"{Utility.GetFileSaveDirectory()}\\{Path.GetFileName(path)}";
-
         // 파일을 저장하는 폴더가 없다면 생성합니다.
         Utility.CreateSaveDirectory();
-
         // 해당 파일이 이 경로에 존재하지 않을때는 이 경로로 복사합니다.
         if (!File.Exists(newPath))
         {
             File.Copy(path, newPath);
         }
-
         // 최종적으로 파일을 저장하는 폴더에 파일이 위치하게 됩니다.
         // 이 경로의 파일을 읽습니다.
         path = newPath;
@@ -901,12 +896,8 @@ public class Music : MonoBehaviour
         {
             return false;
         }
-
         if (!clip)
-        {
             return false;
-        }
-
         // 오디오 클립을 교체할 때 이 함수를 호출해서 메모리 누적을 방지합니다.
         DestoryCurrentClip();
 
@@ -983,7 +974,6 @@ public class Music : MonoBehaviour
         }
 
         GC.Collect(2, GCCollectionMode.Forced);
-        //GC.Collect();
 
         OnLoadMusic?.Invoke();
     }
