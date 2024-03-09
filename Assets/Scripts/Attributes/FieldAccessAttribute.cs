@@ -52,12 +52,15 @@ public class DepthFieldInfo
     public object GetValue<T>(T rootData)
     {
         Stack<DepthFieldInfo> s = new Stack<DepthFieldInfo>();
+        // {루트 직전의 자식, 자식a, 자식b, 변수}
+        // 이와 같은 구조로 스택에 남는다. (왼쪽 값부터 Pop된다)
         DepthFieldInfo currentDepth = this;
         while (currentDepth != null)
         {
             s.Push(currentDepth);
             currentDepth = currentDepth.parent;
         }
+        // 루트부터 읽은 변수까지 순차적으로 파고든다.
         object currentObject = rootData;
         while (s.Count > 0)
         {
@@ -71,6 +74,8 @@ public class DepthFieldInfo
     {
         object originRootData = refRootData.Value;
         Stack<DepthFieldInfo> s = new Stack<DepthFieldInfo>();
+        // {루트 직전의 자식, 자식a, 자식b, 변수}
+        // 이와 같은 구조로 스택에 남는다. (왼쪽 값부터 Pop된다)
         DepthFieldInfo currentDepth = this;
         while (currentDepth != null)
         {
@@ -78,7 +83,12 @@ public class DepthFieldInfo
             currentDepth = currentDepth.parent;
         }
         Queue<Temp> q = new Queue<Temp>();
+        // 현재 오브젝트를 루트로 설정해 최상단 부모가 루트가 되도록 한다.
         object currentObject = originRootData;
+        // 1개만 남겨둔다.
+        // 즉, 값을 변경하려는 변수는 포함하지 않는다.
+        // {(변수<-자식b), (자식b<-자식a), (자식a<-루트 직전의 자식), (루트 직전의 자식<-루트)}
+        // 이와 같은 구조로 큐에 남는다. (자식<-부모 관계이며, 왼쪽 값부터 Pop된다)
         while (s.Count > 1)
         {
             DepthFieldInfo top = s.Pop();
@@ -89,7 +99,10 @@ public class DepthFieldInfo
 
             q.Enqueue(temp);
         }
+        // 큐에 1개(변경하려는 변수)만 남아있기에 currentObject는 변경하려는 변수의 부모이다.
+        // 변경하려는 변수의 부모에서 변경하려는 변수에게 값을 설정한다.
         this.fieldInfo.SetValue(currentObject, value);
+        // 변경된 변수의 부모를 순차적으로 루트까지 적용한다.
         while (q.Count > 0)
         {
             Temp front = q.Dequeue();

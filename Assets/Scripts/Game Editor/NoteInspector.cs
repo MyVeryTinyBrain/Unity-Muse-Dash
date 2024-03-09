@@ -54,11 +54,14 @@ public class NoteInspector : MonoBehaviour
         Clear();
         this.note = note;
 
+        // 선택한 노트의 데이터, 그리고 모든 깊이에 존재하는 자식 변수들 중 접근 가능한 변수들을 찾는다.
         List<DepthFieldInfo> depthFieldInfos = FieldAccessAttribute.GetAccessibleFieldDepthInfos(note.data);
 
         foreach (DepthFieldInfo depth in depthFieldInfos)
         {
             IField field = null;
+
+            // 변수 타입에 일치하는 필드를 생성한다.
 
             if (depth.fieldInfo.FieldType == typeof(bool))
             {
