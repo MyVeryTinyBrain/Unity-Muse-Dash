@@ -15,6 +15,7 @@
 
 ### 시간 이동
 * 마우스를 노트 배치 영역에 위치시키고, `마우스 휠`을 굴려 시간을 증가/감소 시킵니다.
+* `타임라인을 드래그`해 시간을 증가/감소 시킵니다.
 
 ### 노트 선택
 ![image](https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/assets/42267237/56f4209a-e35f-4496-8891-f8ee344fa0f7)
@@ -32,16 +33,23 @@
 ### 노트 드래그
 * 선택된 노트들을 드래그해 다른 시간으로 이동시킬 수 있습니다.
 * 롱 노트의 경우는, 선택한 후 꼬리 부분을 드래그해 길이를 조절할 수 있습니다.
+* 노트 설정 패널에서 직접 노트의 시간을 설정할 수도 있습니다.
 
 ### 노트 삭제
 * 노트들을 선택한 후 `Delete` 키 혹은 노트 조작 패널의 X 버튼으로 삭제할 수 있습니다.
+* 혹은 노트 조작 패널의 X 버튼을 클릭해 삭제할 수 있습니다.
+
+### 복사 & 붙여넣기
+* `Ctrl+C`, `Ctrl+V` 키로 복사 붙여넣기를 수행합니다.
+* 혹은 노트 조작 패널의 복사, 붙여넣기 버튼을 클릭해 수행할 수 있습니다.
 
 ### 음악 재생 조작
 ![image](https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/assets/42267237/2cd67bbf-6449-452e-8ed1-5e731c3a6ca6)  
 * 각각 처음부터 `재생`, `정지`, `일시정지/이어서 재생`기능입니다. `일시정지/이어서 재생` 단축키는 `Space` 입니다.
   
 ### 슬라이더
-![image](https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/assets/42267237/03c7a0c3-1f3f-4516-9a21-f125644bd637)
+![image](https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/assets/42267237/03c7a0c3-1f3f-4516-9a21-f125644bd637)  
+* 슬라이더를 조작해 원하는 재생 시간으로 이동할 수 있습니다.
 
 ### 재생 시간
 ![image](https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/assets/42267237/c335f62f-40c5-4567-96c5-c4cc3b5cc9d4)  
