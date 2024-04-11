@@ -26,14 +26,14 @@ public class Keys
     public static KeyCode CopyNote = KeyCode.C;
     public static KeyCode PasteNote = KeyCode.V;
 
-    public static KeyCode AirHit0 = KeyCode.LeftShift;
-    public static KeyCode AirHit1 = KeyCode.Z;
-    public static KeyCode AirHit2 = KeyCode.X;
-    public static KeyCode AirHit3 = KeyCode.C;
-    public static KeyCode RoadHit0 = KeyCode.Return;
-    public static KeyCode RoadHit1 = KeyCode.Quote;
-    public static KeyCode RoadHit2 = KeyCode.Semicolon;
-    public static KeyCode RoadHit3 = KeyCode.L;
+    public static KeyCode AirHit0 = KeyCode.A;
+    public static KeyCode AirHit1 = KeyCode.S;
+    public static KeyCode AirHit2 = KeyCode.D;
+    public static KeyCode AirHit3 = KeyCode.F;
+    public static KeyCode RoadHit0 = KeyCode.K;
+    public static KeyCode RoadHit1 = KeyCode.L;
+    public static KeyCode RoadHit2 = KeyCode.Quote;
+    public static KeyCode RoadHit3 = KeyCode.Semicolon;
 
     public static KeyCode PauseGame = KeyCode.Escape;
     public static KeyCode PauseMenuLeft = KeyCode.LeftArrow;
