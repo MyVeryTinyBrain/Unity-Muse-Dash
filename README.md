@@ -1,3 +1,6 @@
+## Build
+https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/releases/tag/Build
+
 ## How to play
 1. RhythmGame.exe 를 실행합니다.
 2. 좌측 상단의 두 번째 폴더 아이콘을 클릭해 파일 탐색기를 엽니다.
