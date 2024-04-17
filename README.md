@@ -1,6 +1,6 @@
 ## Build
 https://github.com/MyVeryTinyBrain/Unity-Muse-Dash/releases/tag/Build  
-실행 파일: RhythmGame.exe
+실행 파일: `RhythmGame.exe`
 
 ## How to play
 1. RhythmGame.exe 를 실행합니다.
