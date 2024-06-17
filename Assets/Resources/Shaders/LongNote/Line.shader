@@ -68,6 +68,7 @@ Shader "LongNote/Line"
 
                 float sinTime = _SinTime.w;
                 float sqrSinTime = pow(sinTime, 2);
+                // 1번, 2번 텍스쳐가 위 아래로 움직이도록 uv좌표를 조작합니다.
                 o.texcoord1 = TRANSFORM_TEX(v.texcoord, _Texture1) + float2(0, sqrSinTime * _Texture1WaveAmount);
                 o.texcoord2 = TRANSFORM_TEX(v.texcoord, _Texture2) + float2(0, sqrSinTime * _Texture2WaveAmount);
                 return o;
@@ -75,12 +76,13 @@ Shader "LongNote/Line"
 
             fixed4 SampleBlend(v2f i)
             {
-                fixed4 _0 = tex2D(_Texture0, i.texcoord0);
-                fixed4 _1 = tex2D(_Texture1, i.texcoord1);
-                fixed4 _2 = tex2D(_Texture2, i.texcoord2);
+                fixed4 tex0 = tex2D(_Texture0, i.texcoord0);
+                fixed4 tex1 = tex2D(_Texture1, i.texcoord1);
+                fixed4 tex2 = tex2D(_Texture2, i.texcoord2);
 
-                fixed4 blend01 = lerp(_0, _1, _1.a);
-                fixed4 blend012 = lerp(blend01, _2, _2.a);
+                // 세 개의 텍스쳐를 혼합합니다.
+                fixed4 blend01 = lerp(tex0, tex1, tex1.a);
+                fixed4 blend012 = lerp(blend01, tex2, tex2.a);
                 return blend012;
             }
 

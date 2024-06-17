@@ -67,11 +67,13 @@ Shader "Sprite/Sprite-Outline"
 
                 float2 sampleDistance = _MainTex_TexelSize.xy * _OutlineWidth;
                 float sumAlpha = 0;
+                // 주변 8방향의 픽셀 투명도를 모두 더합니다.
                 for (uint index = 0; index < 8; ++index)
                 {
                     float2 sampleUV = i.texcoord + directions[index] * sampleDistance;
                     sumAlpha += tex2D(_MainTex, sampleUV).a;
                 }
+                // 투명도의 합이 Cutoff 이상이면 아웃라인을 표현합니다.
                 float outline = sumAlpha > _OutlineCutoff;
 
                 fixed4 color = tex2D(_MainTex, i.texcoord);

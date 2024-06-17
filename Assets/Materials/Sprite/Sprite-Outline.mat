@@ -74,7 +74,7 @@ Material:
     - _OcclusionStrength: 1
     - _OutlineCutOffAlpha: 0
     - _OutlineCutoff: 0.991
-    - _OutlineWidth: -0.33
+    - _OutlineWidth: -5
     - _Parallax: 0.02
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1

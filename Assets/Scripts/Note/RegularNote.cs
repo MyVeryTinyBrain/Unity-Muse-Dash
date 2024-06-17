@@ -109,6 +109,7 @@ public class RegularNote : Note
     {
         base.UpdateLocalPosition();
         float y = GetHitLocalY();
+        // ratio: 노트와 판정선 사이의 거리
         transform.localPosition = new Vector2(ratio * mediator.gameSettings.lengthPerSeconds, y);
     }
 
@@ -119,6 +120,7 @@ public class RegularNote : Note
         {
             case RegularNoteInType.Default:
             {
+                // 음악의 재생시간과 노트가 판정선에 닿는 시간과의 차이
                 float animationTime = mediator.music.adjustedTime - data.time;
                 ClearState();
                 SetDefaultAnimationByTime(animationTime);

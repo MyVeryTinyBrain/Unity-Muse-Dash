@@ -20,9 +20,6 @@ public class GameSettings : MonoBehaviour
     float baseGreatDiffTime = 0.13f;
 
     [SerializeField]
-    float basePrecisionDiffTime = 0.025f;
-
-    [SerializeField]
     float baseDamagableRangeTime = 0.01f;
 
     [SerializeField]
@@ -53,8 +50,6 @@ public class GameSettings : MonoBehaviour
     public float perfectDiffTime => basePerfectDiffTime;
 
     public float greatDiffTime => baseGreatDiffTime;
-
-    public float precisionDiffTime => basePrecisionDiffTime;
 
     public float damagableRangeTime => baseDamagableRangeTime;
 

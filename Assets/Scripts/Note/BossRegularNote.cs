@@ -129,7 +129,8 @@ public class BossRegularNote : BossNote
         // data.time - 1 / (speedMultiplier * data.speed * mediator.GetSpeedScaleAtTime(data.time)) = x
 
         float speedMultiplier = GetSpeedMultiplier();
-        float zeroAnimationTime = data.time - 1 / (speedMultiplier * data.speed * mediator.music.adjustedTimeGlobalSpeedScale);
+        float zeroAnimationTime = data.time - 1 / 
+            (speedMultiplier * data.speed * mediator.music.adjustedTimeGlobalSpeedScale);
         bossAnimationData.time = zeroAnimationTime;
 
         bossAnimationData.speed = data.speed;

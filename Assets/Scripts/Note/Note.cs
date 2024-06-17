@@ -216,23 +216,28 @@ public abstract class Note : MonoBehaviour, INote
     protected virtual void Spine_Update() { }
     protected virtual NoteResult OnHit(NotePosition notePosition)
     {
+        // 이미 파괴된 노트는 무시합니다.
         if (isDead)
         {
             return NoteResult.None();
         }
+        // 다른 라인을 타격하는 경우 무시합니다.
         if (notePosition != data.position)
         {
             return NoteResult.None();
         }
+        // 노트가 판정선에 도달하기까지 남은 시간을 계산합니다.
         float diff = Mathf.Abs(mediator.music.adjustedTime - data.time);
+        // 판정선에 도달하기까지 남은 시간이 그레이트 판정 초과이면 무시합니다.
         if (diff > mediator.gameSettings.greatDiffTime)
         {
             return NoteResult.None();
         }
-
         NoteResult result = NoteResult.Hit(notePosition);
+        // 판정선에 도달하기까지 남은 시간에 따라 퍼펙트, 그레이트 판정을 설정합니다.
         result.precision = diff <= mediator.gameSettings.perfectDiffTime ? 
             ComboPrecision.Perfect : ComboPrecision.Great;
+        // 판정에 따른 이펙트를 생성합니다.
         SpawnDyingEffect(notePosition, result.precision);
         isDead = true;
         return result;

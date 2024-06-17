@@ -57,10 +57,14 @@ public class EffectPool : MonoBehaviour, IGameReset
         Effect effect = null;
         if (GetUsableEffectCount(prefab) == 0)
         {
+            // 사용 가능한 이펙트가 없다면
+            // 새 이펙트를 생성합니다.
             effect = AddEffect(prefab);
         }
         else
         {
+            // 사용 가능한 비활성화 이펙트가 있다면
+            // 해당 이펙트를 사용합니다.
             effect = PopEffect(prefab);
             effect.gameObject.SetActive(true);
         }
@@ -78,6 +82,7 @@ public class EffectPool : MonoBehaviour, IGameReset
 
     private void OnComplete(Effect effect, Effect.CompleteResult result)
     {
+        // 이펙트가 완료되면 비활성화하고, 스택에 담습니다.
         effect.gameObject.SetActive(false);
         PushEffect(effect);
     }

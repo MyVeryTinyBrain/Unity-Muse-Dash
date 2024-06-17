@@ -730,11 +730,13 @@ public class Character : MonoBehaviour, IGameReset
         {
             if (Input.GetKeyDown(keyCode))
             {
+                // 윗 라인 타격 키를 누른 경우 스택을 증가시킵니다.
                 airPressStack = Mathf.Clamp(airPressStack + 1, 0, airKeys.Count);
                 airKeyDown += 1;
             }
             else if (Input.GetKeyUp(keyCode))
             {
+                // 윗 라인 타격 키를 뗀 경우 스택을 감소시킵니다.
                 airPressStack = Mathf.Clamp(airPressStack - 1, 0, airKeys.Count);
             }
         }
@@ -759,6 +761,7 @@ public class Character : MonoBehaviour, IGameReset
             mediator.music.visibleNotes.Sort((lhs, rhs) => lhs.ratio.CompareTo(rhs.ratio));
         }
 
+        // 해당하는 키를 뗀 경우의 처리
         if (prevAirStack > airPressStack && airPressStack == 0)
         {
             ReleasePress(NotePosition.Air);
@@ -767,7 +770,7 @@ public class Character : MonoBehaviour, IGameReset
         {
             ReleasePress(NotePosition.Road);
         }
-
+        // 해당하는 키를 누른 경우의 처리
         for (int i = 0; i < airKeyDown; ++i)
         {
             Attack(NotePosition.Air);

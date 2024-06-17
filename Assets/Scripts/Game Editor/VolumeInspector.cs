@@ -55,7 +55,9 @@ public class VolumeInspector : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             float panelWidth = rectTransform.rect.width;
             float deltaPercent = delta.x / panelWidth;
             float screenTimeLength = gameRightTime - gameLeftTime;
+            // UI 로컬 공간에서의 마우스 움직임 거리를 시간으로 변환합니다.
             int deltaXTimeSample = MusicUtility.TimeToTimeSamples(deltaPercent * screenTimeLength, mediator.music.frequency);
+            // 드래그한 시간만큼 음악 재생시간에 추가합니다.
             int newTimeSample = dragBeginTimeSample + deltaXTimeSample;
             mediator.music.playingTimeSample = newTimeSample;
         }
@@ -101,9 +103,11 @@ public class VolumeInspector : MonoBehaviour, IPointerDownHandler, IPointerUpHan
 
         // Draw volume
         GL.Begin(GL.QUADS);
+        // 음악의 볼륨 파형 데이터 배열
         float[] volume = mediator.music.leftVolumeData;
         if (volume != null)
         {
+            // 이 간격마다 볼륨 데이터를 탐색합니다.
             int skip = Mathf.Clamp(skipSamples, 1, int.MaxValue);
             // 화면 왼쪽 경계 x위치가 나타내는 시간
             int leftTimeSample = MusicUtility.TimeToTimeSamples(gameLeftTime, mediator.music.frequency);
@@ -111,15 +115,16 @@ public class VolumeInspector : MonoBehaviour, IPointerDownHandler, IPointerUpHan
             int rightTimeSample = MusicUtility.TimeToTimeSamples(gameRightTime, mediator.music.frequency);
             int beginTimeSample = (leftTimeSample / skip) * skip;
             int endTimeSample = (rightTimeSample / skip) * skip;
-
+            // 화면 왼쪽부터 화면 오른쪽까지 skip 간격마다 볼륨 데이터를 읽어 그립니다.
             for (int i = beginTimeSample; i < endTimeSample && i < volume.Length; i += skip)
             {
                 float percent = (float)(i - beginTimeSample) / (float)(endTimeSample - beginTimeSample);
                 int timeSample = i;
                 float x = percent * panelWidth - panelWidth * 0.5f;
-                float y = timeSample > 0 && timeSample < volume.Length - 1 ? Mathf.Abs(volume[timeSample]) : 0;
+                // 볼륨 데이터를 읽어 세로선의 길이로 사용합니다.
+                float y = (timeSample > 0 && timeSample < volume.Length - 1) ? Mathf.Abs(volume[timeSample]) : 0;
                 y *= panelHeight * 0.5f;
-
+                
                 GL.Vertex3(x - localVolumeLineWidth, +y, 0);
                 GL.Vertex3(x + localVolumeLineWidth, +y, 0);
                 GL.Vertex3(x + localVolumeLineWidth, -y, 0);

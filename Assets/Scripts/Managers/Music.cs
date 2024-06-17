@@ -416,41 +416,6 @@ public class Music : MonoBehaviour
         }
     }
 
-    public float TimeToRatio(float time, float speed, float playingTime)
-    {
-        return MusicUtility.TimeToRatio(time, speed * GetSpeedScaleAtTime(playingTime), playingTime);
-    }
-
-    public float TimeToRatioAtCurrentTime(float time, float speed)
-    {
-        return MusicUtility.TimeToRatio(time, speed * currentGlobalSpeedScale, playingTime);
-    }
-
-    public float TimeToRatioAtAdjustedTime(float time, float speed)
-    {
-        // speedScaleAtAdjustedTime: 오프셋이 적용된 게임 전체 배속
-        // adjustedTime: 오프셋이 적용된 현재 음악 재생 시간
-        return MusicUtility.TimeToRatio(time, speed * speedScaleAtAdjustedTime, adjustedTime);
-    }
-
-    public float TimeToLocalX(float time, float speed, float playingTime)
-    {
-        float ratio = TimeToRatio(time, speed, playingTime);
-        return ratio * mediator.gameSettings.lengthPerSeconds;
-    }
-
-    public float TimeToLocalXAtCurrentTime(float time, float speed)
-    {
-        float ratio = TimeToRatioAtCurrentTime(time, speed);
-        return ratio * mediator.gameSettings.lengthPerSeconds;
-    }
-
-    public float TimeToLocalXAtAdjustedTime(float time, float speed)
-    {
-        float ratio = TimeToRatioAtAdjustedTime(time, speed);
-        return ratio * mediator.gameSettings.lengthPerSeconds;
-    }
-
     struct LocalXToTime_Pair
     {
         public float time;
@@ -507,19 +472,6 @@ public class Music : MonoBehaviour
         float t = MathUtility.InverseLerp(LocalXToTime_Pairs[currentIndex].localX, LocalXToTime_Pairs[nextIndex].localX, localX);
         float time = Mathf.Lerp(LocalXToTime_Pairs[currentIndex].time, LocalXToTime_Pairs[nextIndex].time, t);
         return time;
-    }
-
-    public void GetScreenTimes(float playingTime, out float leftTime, out float rightTime)
-    {
-        Camera cam = Camera.main;
-        Vector2 worldCamSize = cam.OrthographicExtents();
-        Vector2 worldCamPos = cam.transform.position;
-        Vector2 localCamSize = mediator.hitPoint.transform.InverseTransformVector(worldCamSize);
-        Vector2 localCamPos = mediator.hitPoint.transform.InverseTransformPoint(worldCamPos);
-        float localCameraHalfSize = localCamSize.x / 2;
-        float localCameraX = localCamPos.x;
-        leftTime = LocalXToTime(localCameraX - localCameraHalfSize, playingTime);
-        rightTime = LocalXToTime(localCameraX + localCameraHalfSize, playingTime);
     }
 
     public float GetBPMAtTime(float time)
@@ -594,6 +546,78 @@ public class Music : MonoBehaviour
         return mapTypeDatas[closetIndex].type;
     }
 
+    public int GetBossAnimationIndexAtTime(float playingTime)
+    {
+        int bsBegin = 0;
+        int bsEnd = bossAnimationsDatas.Count - 1;
+        int closetIndex = 0;
+
+        // Binary search
+        while (bsBegin <= bsEnd)
+        {
+            int mid = (bsBegin + bsEnd) / 2;
+            if (bossAnimationsDatas[mid].time <= playingTime)
+            {
+                closetIndex = mid;
+                bsBegin = mid + 1;
+            }
+            else
+            {
+                bsEnd = mid - 1;
+            }
+        }
+
+        return closetIndex;
+    }
+
+    public float TimeToRatio(float time, float speed, float playingTime)
+    {
+        return MusicUtility.TimeToRatio(time, speed * GetSpeedScaleAtTime(playingTime), playingTime);
+    }
+
+    public float TimeToRatioAtCurrentTime(float time, float speed)
+    {
+        return MusicUtility.TimeToRatio(time, speed * currentGlobalSpeedScale, playingTime);
+    }
+
+    public float TimeToRatioAtAdjustedTime(float time, float speed)
+    {
+        // speedScaleAtAdjustedTime: 오프셋이 적용된 게임 전체 배속
+        // adjustedTime: 오프셋이 적용된 현재 음악 재생 시간
+        return MusicUtility.TimeToRatio(time, speed * speedScaleAtAdjustedTime, adjustedTime);
+    }
+
+    public float TimeToLocalX(float time, float speed, float playingTime)
+    {
+        float ratio = TimeToRatio(time, speed, playingTime);
+        return ratio * mediator.gameSettings.lengthPerSeconds;
+    }
+
+    public float TimeToLocalXAtCurrentTime(float time, float speed)
+    {
+        float ratio = TimeToRatioAtCurrentTime(time, speed);
+        return ratio * mediator.gameSettings.lengthPerSeconds;
+    }
+
+    public float TimeToLocalXAtAdjustedTime(float time, float speed)
+    {
+        float ratio = TimeToRatioAtAdjustedTime(time, speed);
+        return ratio * mediator.gameSettings.lengthPerSeconds;
+    }
+
+    public void GetScreenTimes(float playingTime, out float leftTime, out float rightTime)
+    {
+        Camera cam = Camera.main;
+        Vector2 worldCamSize = cam.OrthographicExtents();
+        Vector2 worldCamPos = cam.transform.position;
+        Vector2 localCamSize = mediator.hitPoint.transform.InverseTransformVector(worldCamSize);
+        Vector2 localCamPos = mediator.hitPoint.transform.InverseTransformPoint(worldCamPos);
+        float localCameraHalfSize = localCamSize.x / 2;
+        float localCameraX = localCamPos.x;
+        leftTime = LocalXToTime(localCameraX - localCameraHalfSize, playingTime);
+        rightTime = LocalXToTime(localCameraX + localCameraHalfSize, playingTime);
+    }
+
     public void AddNote(Note note) 
     {
         note.transform.SetParent(mediator.hitPoint.transform);
@@ -653,30 +677,6 @@ public class Music : MonoBehaviour
                 SortBossAnimationDatas();
             }
         }
-    }
-
-    public int GetBossAnimationIndexAtTime(float playingTime)
-    {
-        int bsBegin = 0;
-        int bsEnd = bossAnimationsDatas.Count - 1;
-        int closetIndex = 0;
-
-        // Binary search
-        while (bsBegin <= bsEnd)
-        {
-            int mid = (bsBegin + bsEnd) / 2;
-            if (bossAnimationsDatas[mid].time <= playingTime)
-            {
-                closetIndex = mid;
-                bsBegin = mid + 1;
-            }
-            else
-            {
-                bsEnd = mid - 1;
-            }
-        }
-
-        return closetIndex;
     }
 
     public ulong GetNextNoteHash()
@@ -794,19 +794,13 @@ public class Music : MonoBehaviour
     void DestoryCurrentClip()
     {
         if (!musicSource.clip)
-        {
             return;
-        }
-
 #if UNITY_EDITOR
         // 이 클립이 에셋인 경우에는 삭제할 수 없습니다.
         // 에디터 상에서 실수로 클립을 등록한 경우에 적용되는 예외 코드입니다.
         if (AssetDatabase.Contains(musicSource.clip))
-        {
             return;
-        }
 #endif
-
         Destroy(musicSource.clip);
         musicSource.clip = null;
     }
@@ -853,22 +847,13 @@ public class Music : MonoBehaviour
         AudioType audioType = AudioType.UNKNOWN;
         string extension = Path.GetExtension(path).ToLower();
         if(extension == ".mp3")
-        {
             audioType = AudioType.MPEG;
-        }
         else if(extension == ".wav")
-        {
             audioType = AudioType.WAV;
-        }
         else if(extension == ".ogg")
-        {
             audioType = AudioType.OGGVORBIS;
-        }
         else
-        {
             return false;
-        }
-
         path = Utility.ToStandardPathFormat(path);
 
         // 파일 경로를 파일을 저장하는 폴더 내부로 변경합니다.
@@ -877,9 +862,7 @@ public class Music : MonoBehaviour
         Utility.CreateSaveDirectory();
         // 해당 파일이 이 경로에 존재하지 않을때는 이 경로로 복사합니다.
         if (!File.Exists(newPath))
-        {
             File.Copy(path, newPath);
-        }
         // 최종적으로 파일을 저장하는 폴더에 파일이 위치하게 됩니다.
         // 이 경로의 파일을 읽습니다.
         path = newPath;
@@ -903,9 +886,7 @@ public class Music : MonoBehaviour
 
         musicSource.clip = clip;
         if (mediator.gameSettings.isEditor)
-        {
             MusicUtility.ExtractAudioVolumes(musicSource.clip, out left, out right);
-        }
         return true;
     }
 

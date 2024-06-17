@@ -55,6 +55,7 @@ public class Background : MonoBehaviour
 
     private void Update()
     {
+        // 음악 재생시간에 알맞은 배경 스킨을 이진탐색해 맵 스킨을 변경
         MapType currentMap = mediator.music.GetMapTypeAtTime(mediator.music.playingTime);
         if(currentMap != prevMap)
         {
@@ -63,6 +64,7 @@ public class Background : MonoBehaviour
             backgrounds[(int)currentMap].SetActive(true);
         }
 
+        // 배경 오브젝트를 음악 재생시간에 알맞은 위치로 이동 또는 애니메이션 재생
         foreach(IBackgroundObject background in backgroundObjects)
         {
             background.SetTime(mediator.music.playingTime);

@@ -121,6 +121,7 @@ public class SpriteBoundsArray : SpriteBounds, IBackgroundObject
 
     public void UpdateElementTransforms(Direction direction, float time, float speed)
     {
+        // 음악 재생시간을 거리로 사용합니다.
         float additionalDistance = time * speed;
         Vector2 arrayLocalMin = localLeftDown;
         Vector2 arrayLocalMax = localRightUp;
@@ -137,6 +138,7 @@ public class SpriteBoundsArray : SpriteBounds, IBackgroundObject
                     float x = MathUtility.RepeatInMinMax(arrayLocalMin.x, arrayLocalMax.x, unRepeatedX);
                     float y = spriteBounds.originLocal.y;
                     Vector2 world = transform.TransformPoint(x, y, 0);
+                    // 배경 오브젝트의 왼쪽 모서리를 이동합니다.
                     spriteBounds.spriteBounds.SnapLeftEdge(world);
 
                     int prevRepeatIndex = MathUtility.GetRepeatIndex(arrayLocalMin.x, arrayLocalMax.x, prevUnRepeatedX);

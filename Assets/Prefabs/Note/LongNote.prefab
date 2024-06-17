@@ -198,6 +198,8 @@ MonoBehaviour:
     time: 0
     speed: 1
     position: -1
+    type: 1
+    hash: 0
     regularNoteData:
       noteInType: 0
       endInRatio: 0.5
@@ -232,11 +234,7 @@ MonoBehaviour:
       type: 0
       useUnifiedDuration: 0
       unifiedDuration: 0
-      useNoteSpawnEffect: 0
-      noteSpawnWeapon: 0
       noteTime: 0
-    type: 1
-    hash: 0
   placeableDesc:
     Air: 1
     Center: 0
